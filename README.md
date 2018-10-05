@@ -2,7 +2,7 @@
 
 ## Goal
 
-Slides presentation of the BigData PLatform for the Newtech4Steel project
+Slides presentation of the BigData Platform for the Newtech4Steel project
 
 These slides are available on OpenShift at http://bigdataplatfrom-slides.openshift.ext.cetic.be/#/
 
@@ -18,4 +18,4 @@ It uses the reveal.js framework: https://github.com/hakimel/reveal.js/
 
 ### Authors
 
-* **Alexandre Nuttinck** : alexandre.nurrinck@cetic.be
+* **Alexandre Nuttinck** : alexandre.nuttinck@cetic.be
