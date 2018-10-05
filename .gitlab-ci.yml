@@ -24,7 +24,7 @@ develop:
   tags:
     - docker
   variables:
-    APP: slides-openshift
+    APP: bigdataplatform-slides
     APP_HOST: bigdataplatform-slides.$OPENSHIFT_DOMAIN
   environment:
     name: develop
