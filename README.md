@@ -4,7 +4,7 @@
 
 Slides presentation of the BigData Platform for the Newtech4Steel project
 
-These slides are available on OpenShift at http://bigdataplatfrom-slides.openshift.ext.cetic.be/#/
+These slides are available on OpenShift at http://bigdataplatform-slides.openshift.ext.cetic.be/#/
 
 The slides are automatically deployed to OpenShift when there is a commit on the `develop` branch. (See the gitlab-ci file)
 
