@@ -31,8 +31,19 @@
 					<h3>Alexandre Nuttinck / Fabian Steels - Software and Systems Technologies - 14 / 11 / 2018</h3>
 					<i> <small> alexandre.nuttinck@cetic.be / fabian.steels@cetic.be </small> </i>
 				</section>
-<!-- MODIFY HERE -->
 				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+					<script type="text/template">
+			### Content
+			* Challenges from Big Data
+			* Big Data architrectures
+			* Our Big Data Platform
+			* Journey of a dataset
+ 			  * Up to the Cloud
+			  * Inside the cloud
+			* Visualisation tools
+			* Concluding remarks
+					</script>
+				</section>				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 					<script type="text/template">
 ### Big data
 * Challenges from Big Data
@@ -40,6 +51,8 @@
   - Large data volume
   - Large data velocity
   - Possible unboundedness of the data
+  - Data heterogeneity
+  - Data unstructuredness
   - Need for availability
   - Need for real-time analysis
 
@@ -158,7 +171,7 @@ Data unboundedness:
 							<script type="text/template">
 								#### Our Proposition: An Architectural Toolkit
 								<div height=70%>
-									<img class="plain" data-src="img/archi/GrindingsViews-LogicalView.png" width=60%>
+									<img class="plain" data-src="img/archi/GrindingsViews-Simplified-logical-view.png" width=60%>
 								</div>
 							</script>
 						</section>
@@ -183,7 +196,7 @@ Data unboundedness:
 							#### From the premise to the cloud
 							<div style="display:table">
 								<div style="display:table-cell">
-									<img class="plain" data-src="img/archi/GrindingsViews-LogicalView_On_Premises.png" width=80%>
+									<img class="plain" data-src="img/archi/GrindingsViews-components-premise.png" width=120%>
 								</div>
 							<div style="display:table-cell; font-size:80%; vertical-align:middle">
 								<ul>
@@ -215,7 +228,7 @@ Data unboundedness:
 							#### From the premise to the cloud
 							<div style="display:table">
 								<div style="display:table-cell">
-									<img class="plain" data-src="img/archi/GrindingsViews-LogicalView_Entries.png" width=80%>
+									<img class="plain" data-src="img/archi/GrindingsViews-components-ingestion.png" width=80%>
 								</div>
 							<div style="display:table-cell; font-size:80%; vertical-align:middle">
 								<ul>
@@ -254,11 +267,11 @@ Data unboundedness:
 							###### Analysis layer
 							<div>
 								<div height = "30%">
-									<img class="plain" data-src="img/archi/GrindingsViews-LogicalView_Processing.png" alt="Processing" width="50%">
+									<img class="plain" data-src="img/archi/GrindingsViews-components-analysis.png" alt="Processing" width="30%">
 								</div>
 								<div style="font-size:80%">
 									<ul>
-										<li> Ingested data are backed up in a <b>Data Lake</b></li>
+										<li> Ingested datae are backed up in a <b>Data Lake</b></li>
 										<ul>
 										 	<li>Allows for replays or experimentations (see next)</li>
 											<li>Batch processes will load data from the data lake</li>
@@ -320,45 +333,107 @@ Data unboundedness:
 						<script type="text/template">
 							#### Data visualisation: BI
 
-							<div "display:table">
-								<div style="display:table-cell" width="40%">
-									<a href="https://superset.incubator.apache.org/"><img class="plain" data-src="img/superset/bank_dash.png" alt="BI Viz" width="50%"></a>
-								</div>
-								<div style="display:table-cell; vertical-align:middle; horizontal-align:middle;" width="60%" >
-									<ul>
-									 <li> Exploration of the DWH</li>
-									 <li> Report generation</li>
-									 <li> Data aggregations</li>
-									 <li> Multiple sources</li>
-									 <li> Example tools:</li>
-									 <ul>
-										 <li>Apache Superset</li>
-										 <li>Tableau</li>
-										 <li>JasperSoft </li>
-									 </ul>
-									</ul>
-								</div>
-							</div>
+							<table align="center" style="margin-left: auto; margin-right: auto;">
+								<tr>
+									<td style="vertical-align:middle" width="50%">
+										<a href="https://superset.incubator.apache.org/"><img class="plain" data-src="img/superset/bank_dash.png" alt="BI Viz"></a>
+									</td>
+									<td style="vertical-align:middle; text-align:center">
+										<ul>
+										 <li> Exploration of the DWH</li>
+										 <li> Report generation</li>
+										 <li> Data aggregations</li>
+										 <li> Multiple sources</li>
+										 <li> Example tools:</li>
+										 <ul>
+											 <li>Apache Superset</li>
+											 <li>Tableau</li>
+											 <li>JasperSoft </li>
+										 </ul>
+										</ul>
+									</td>
+								</tr>
+						</table>
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
 							#### Data visualisation: Monitoring
-							<div "display:table">
-								<div style="display:table-cell" width="40%">
-									<a href="https://grafana.com/dashboards/1701"><img class="plain" data-src="img/grafana/grafana.png" alt="Monitoring Viz" width="80%"></a>
-								</div>
-								<div style="display:table-cell; vertical-align:middle; horizontal-align:middle; font-size:90%" width="60%" >
-									<ul>
-									 <li> Live status</li>
-									 <li> Health check</li>
-									 <li> Display alarms</li>
-									 <li> Example: Apache Grafana</li>
-									</ul>
-								</div>
-							</div>
+<table>
+	<tr>
+		<td width="65%" style="vertical-align:middle; border:0px">
+			<a href="https://grafana.com/dashboards/1701"><img class="plain" data-src="img/grafana/grafana.png" alt="Monitoring Viz"></a>
+		</td>
+	</tr>
+	<tr>
+		<table>
+			<tr>
+				<td  style="border:0px">
+					<ul>
+					 <li> Live status</li>
+					 <li> Health check</li>
+				 	</ul>
+			 	</td>
+			 	<td  style="border:0px">
+				 	<ul>
+					 	<li> Display alarms</li>
+					 	<li> Example: Grafana</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</tr>
+</table>
 						</script>
 					</section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							#### Data visualisation: BI
+
+							<table align="center" style="margin-left: auto; margin-right: auto;">
+								<tr>
+									<td style="vertical-align:middle" width="50%">
+										<a href="https://superset.incubator.apache.org/"><img class="plain" data-src="img/superset/bank_dash.png" alt="BI Viz"></a>
+									</td>
+									<td style="vertical-align:middle; text-align:center">
+										<ul>
+										 <li> Exploration of the DWH</li>
+										 <li> Report generation</li>
+										 <li> Data aggregations</li>
+										 <li> Multiple sources</li>
+										 <li> Example tools:</li>
+										 <ul>
+											 <li>Apache Superset</li>
+											 <li>Tableau</li>
+											 <li>JasperSoft </li>
+										 </ul>
+										</ul>
+									</td>
+								</tr>
+						</table>
+						</script>
+					</section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							#### Data visualisation: Data Exploration
+							<table>
+								<tr>
+									<td style="vertical-align:middle" width="60%">
+										<img class="plain" data-src="img/jupyter/jupyter-view.png" alt="Exploration Viz">
+									</td>
+									<td style="vertical-align:middle">
+										<ul>
+											<li> Load data</li>
+											<li> Test & build models</li>
+											<li> Prepare views in DWH</li>
+											<li> Example: Jupyter</li>
+										</ul>
+									</td>
+								</tr>
+								</table>
+						</script>
+					</section>
+
 				</section>
 
 				<section>
@@ -374,10 +449,11 @@ Data unboundedness:
 					<script type="text/template">
 #### Concluding remarks
 * Generic architecture:
-	- skip batch layer + Kafka (set with 24h resiliance): Kappa architecture
+	- skip batch layer + Kafka with resiliance: Kappa architecture
 	- Keeping all components: Lambda architectures
-	- Fully tunable: each tenant can have a different use
+	- Tunable: Tenants can use different settings
 * Is a big data architectural Toolkit
+  - Provide default settings
 	- Many tools are implemented
 	- Not all are relevant to every situations
 * Modularity
