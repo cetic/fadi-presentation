@@ -28,14 +28,14 @@
 				<section class="homepage" data-background-image="img/background-homepage.png" data-background-size="contain">
 					<h1>CETIC - BigData Platform<h1/>
 					<h2>BigData Platform for the NewTech4Steel Research Project</h2>
-					<h3>Alexandre Nuttinck / Fabian Steels - Software and Systems Technologies - 14 / 11 / 2018</h3>
-					<i> <small> alexandre.nuttinck@cetic.be / fabian.steels@cetic.be </small> </i>
+					<h3>Térence Delsate / Fabian Steels - Software and Systems Technologies - 14 / 11 / 2018</h3>
+					<i> <small> terence.delsate@cetic.be / fabian.steels@cetic.be </small> </i>
 				</section>
 				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 					<script type="text/template">
 			### Content
 			* Challenges from Big Data
-			* Big Data architrectures
+			* Big Data architectures
 			* Our Big Data Platform
 			* Journey of a dataset
  			  * Up to the Cloud
@@ -46,13 +46,15 @@
 				</section>				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 					<script type="text/template">
 ### Big data
-* Challenges from Big Data
+* Big Data / Challenge
 
-  - Large data volume
-  - Large data velocity
-  - Possible unboundedness of the data
-  - Data heterogeneity
-  - Data unstructuredness
+  - Large data volume / Storage
+  - Large data velocity / Avoid leakage
+  - Data unboundedness / overflow
+  - Data heterogeneity / dispatch
+  - Data unstructuredness / mining
+
+* End user challenges
   - Need for availability
   - Need for real-time analysis
 
@@ -202,12 +204,11 @@ Data unboundedness:
 								<ul>
 									<li> Streaming layer</li>
 										<ul>
-											<li>Datae are collected on-site...</li>
+											<li>Datae are collected on-site</li>
 												<ul>
 													<li>Sensors: data producers</li>
 													<li>Machines: monitored units</li>
 												</ul>
-											<li>... and centralized to a sensor portal</li>
 										</ul>
 									<li>Static layer</li>
 									<ul>
@@ -239,12 +240,12 @@ Data unboundedness:
 										</ul>
 									<li>Cloud gateway</li>
 									<ul>
-										<li>Entry point for the streaming layer
+										<li>Entry point for the streaming layer (e.g. Azure IOT, AWS IOT)
 											<ul>
 												<li>e.g. Message broker, online IOT endpoints... </li>
 											</ul>
 									</ul>
-									<li>Data ingestion</li>
+									<li>Data ingestion (e.g. Nifi, Camel)</li>
 										<ul>
 											<li>Connects to the gateways</li>
 											<li>Unifies static and streamed layers output</li>
@@ -271,17 +272,17 @@ Data unboundedness:
 								</div>
 								<div style="font-size:80%">
 									<ul>
-										<li> Ingested datae are backed up in a <b>Data Lake</b></li>
+										<li> Ingested datae are backed up in a <b>Data Lake</b> (e.g. fs, mongoDB, TS DB)</li>
 										<ul>
 										 	<li>Allows for replays or experimentations (see next)</li>
 											<li>Batch processes will load data from the data lake</li>
 										</ul>
-									 	<li>Broker: Entry point, distributed, resiliant (see next presentation)</li>
-									 	<li>Extract - Transform - Load (ETL) layer: preprocessing of the raw datae</li>
+									 	<li>Broker (e.g. Kafka, Pulsar): Entry point, distributed, resiliant (see next presentation)</li>
+									 	<li>Extract - Transform - Load (ETL) layer (e.g. scripts, Beam, Flink, Spark): preprocessing of the raw datae</li>
 										<ul>
 										- processed data are sent back to the broker in a different topic (can be another broker)
 										</ul>
-									 	<li>The cleaned stream is processed in the <b>Stream Processor</b> layer</li>
+									 	<li>The cleaned stream is processed in the <b>Stream Processor</b> layer (e.g. Spark, Flink, Beam)</li>
 									</ul>
 								</div>
 							</div>
@@ -296,12 +297,12 @@ Data unboundedness:
 								</div>
 								<div style="font-size:70%">
 									<ul>
-										<li> Processed data are stored on the <b>Datawarehouse</b> (DWH)</li>
+										<li> Processed data are stored on the <b>Datawarehouse</b> (DWH) (e.g. PGQL, Open TSDB, Cassandra)</li>
 										<li> The DWH is exposed to
 										<ul>
-											<li> a <b>Business Intelligence</b> (BI) tool for visualisation and analysis
-											<li> a monitoring tool for continuous check of the data stream</li>
-											<li> a data exploration / model building layer</li>
+											<li> a <b>Business Intelligence</b> (BI) tool (e.g. Tableau, Superset) for visualisation and analysis
+											<li> a monitoring tool for continuous check of the data stream (e.g. Grafana)</li>
+											<li> a data exploration / model building layer (e.g. Jupyter, Zeppelin)</li>
 										</ul>
 
 										<li>The DWH contains the properly formatted and, filtered and processed datae</li>
@@ -319,9 +320,9 @@ Data unboundedness:
 								</div>
 								<div style="font-size:70%">
 									<ul>
-										<li> After data exploration, analytic models can be updated
-										<li> Sent to the <b>model repository</b>
-										<li> ETL, Stream and batch processing layers are fed byt the model repo
+										<li> After data exploration, the analysis models can be updated
+										<li> Sent to the <b>model repository</b> (e.g. Nexus)
+										<li> ETL, Stream and batch processing layers are fed by the model repo
 									</ul>
 								</div>
 							</script>
@@ -335,7 +336,7 @@ Data unboundedness:
 
 							<table align="center" style="margin-left: auto; margin-right: auto;">
 								<tr>
-									<td style="vertical-align:middle" width="50%">
+									<td style="vertical-align:middle" width="40%">
 										<a href="https://superset.incubator.apache.org/"><img class="plain" data-src="img/superset/bank_dash.png" alt="BI Viz"></a>
 									</td>
 									<td style="vertical-align:middle; text-align:center">
@@ -361,58 +362,22 @@ Data unboundedness:
 							#### Data visualisation: Monitoring
 <table>
 	<tr>
-		<td width="65%" style="vertical-align:middle; border:0px">
+		<td width="70%" style="vertical-align:middle; border:0px">
 			<a href="https://grafana.com/dashboards/1701"><img class="plain" data-src="img/grafana/grafana.png" alt="Monitoring Viz"></a>
 		</td>
-	</tr>
-	<tr>
-		<table>
-			<tr>
-				<td  style="border:0px">
-					<ul>
-					 <li> Live status</li>
-					 <li> Health check</li>
-				 	</ul>
-			 	</td>
-			 	<td  style="border:0px">
-				 	<ul>
-					 	<li> Display alarms</li>
-					 	<li> Example: Grafana</li>
-					</ul>
-				</td>
-			</tr>
-		</table>
+		<td  style="vertical-align:middle; border:0px">
+			<ul>
+			 	<li> Live status</li>
+			 	<li> Health check</li>
+			 	<li> Display alarms</li>
+			 	<li> Example: Grafana</li>
+			</ul>
+		</td>
 	</tr>
 </table>
 						</script>
 					</section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							#### Data visualisation: BI
 
-							<table align="center" style="margin-left: auto; margin-right: auto;">
-								<tr>
-									<td style="vertical-align:middle" width="50%">
-										<a href="https://superset.incubator.apache.org/"><img class="plain" data-src="img/superset/bank_dash.png" alt="BI Viz"></a>
-									</td>
-									<td style="vertical-align:middle; text-align:center">
-										<ul>
-										 <li> Exploration of the DWH</li>
-										 <li> Report generation</li>
-										 <li> Data aggregations</li>
-										 <li> Multiple sources</li>
-										 <li> Example tools:</li>
-										 <ul>
-											 <li>Apache Superset</li>
-											 <li>Tableau</li>
-											 <li>JasperSoft </li>
-										 </ul>
-										</ul>
-									</td>
-								</tr>
-						</table>
-						</script>
-					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
 							#### Data visualisation: Data Exploration
@@ -426,7 +391,7 @@ Data unboundedness:
 											<li> Load data</li>
 											<li> Test & build models</li>
 											<li> Prepare views in DWH</li>
-											<li> Example: Jupyter</li>
+											<li> Example: Jupyter, Apache Zeppelin</li>
 										</ul>
 									</td>
 								</tr>
@@ -447,18 +412,23 @@ Data unboundedness:
 
 				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 					<script type="text/template">
-#### Concluding remarks
-* Generic architecture:
+#### Our architecture is
+
+* A generic architecture:
 	- skip batch layer + Kafka with resiliance: Kappa architecture
 	- Keeping all components: Lambda architectures
-	- Tunable: Tenants can use different settings
-* Is a big data architectural Toolkit
-  - Provide default settings
-	- Many tools are implemented
-	- Not all are relevant to every situations
-* Modularity
+* toolkit
+  - Provide default settings including many tools
+* Modular
 	- Each components can be replaced in your own deployment
-					</script>
+* Portable
+  - Doesn't rely on proprietary technologies
+  - Adaptable to any cloud provider
+* Service
+  - Implements a platform as a service (PaaS)
+  - Will be available directly in our cloud
+  - Can be deployed anywhere
+			</script>
 				</section
 			</div>
 		</div>
