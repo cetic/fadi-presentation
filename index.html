@@ -172,8 +172,8 @@ Data unboundedness:
 						<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 							<script type="text/template">
 								#### Our Proposition: An Architectural Toolkit
-								<div height=70%>
-									<img class="plain" data-src="img/archi/GrindingsViews-Simplified-logical-view.png" width=60%>
+								<div height=80%>
+									<img class="plain" data-src="img/archi/GrindingsViews-Simplified-logical-view.png" width=70%>
 								</div>
 							</script>
 						</section>
@@ -187,6 +187,7 @@ Data unboundedness:
 								  - depending on the components implementation
 								- Multitenancy
 								- Relies on mature opensource projects
+								- Cloud agnostic
 
 							</script>
 						</section>
@@ -233,27 +234,28 @@ Data unboundedness:
 								</div>
 							<div style="display:table-cell; font-size:80%; vertical-align:middle">
 								<ul>
-									<li>API gateway</li>
+									<li>API gateway (e.g. Kong)</li>
 										<ul>
 											<li>Entry point for the static layer</li>
 											<li>Bi-directional gateway for pulling/pushing static information </li>
 										</ul>
 									<li>Cloud gateway</li>
 									<ul>
-										<li>Entry point for the streaming layer (e.g. Azure IOT, AWS IOT)
+										<li>Entry point for the streaming layer (e.g. Azure IoT hub, AWS IoT, Kura, mqtt)
 											<ul>
 												<li>e.g. Message broker, online IOT endpoints... </li>
 											</ul>
 									</ul>
-									<li>Data ingestion (e.g. Nifi, Camel)</li>
-										<ul>
-											<li>Connects to the gateways</li>
-											<li>Unifies static and streamed layers output</li>
-										</ul>
 									<li>Device management</li>
 									<ul>
 										<li>Edit properties of the devices</li>
 									</ul>
+									<li>Data flow management (based on the Entreprise Integration Patterns: e.g. Nifi, Camel)</li>
+										<ul>
+											<li>Connects to the gateways</li>
+											<li>Unifies static and streamed layers output</li>
+											<li>drives data following the treatment (routing)</li>
+										</ul>
 								</ul>
 							</div>
 						</div>
@@ -272,7 +274,7 @@ Data unboundedness:
 								</div>
 								<div style="font-size:80%">
 									<ul>
-										<li> Ingested datae are backed up in a <b>Data Lake</b> (e.g. fs, mongoDB, TS DB, PaaS)</li>
+										<li> Ingested datae are backed up in a <b>Data Lake</b> (e.g. fs, mongoDB, openTSDB, PaaS)</li>
 										<ul>
 										 	<li>Allows for replays or experimentations (see next)</li>
 											<li>Batch processes will load data from the data lake</li>
@@ -297,7 +299,7 @@ Data unboundedness:
 								</div>
 								<div style="font-size:70%">
 									<ul>
-										<li> Processed data are stored on the <b>Datawarehouse</b> (DWH) (e.g. PGQL, Open TSDB, Cassandra)</li>
+										<li> Processed data are stored on the <b>Datawarehouse</b> (DWH) (e.g. PgSQL, Open TSDB, Cassandra)</li>
 										<li> The DWH is exposed to
 										<ul>
 											<li> a <b>Business Intelligence</b> (BI) tool (e.g. Tableau, Superset) for visualisation and analysis
