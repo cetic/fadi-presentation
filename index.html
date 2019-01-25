@@ -26,373 +26,420 @@
 		<div class="reveal">
 			<div class="slides">
 				<section class="homepage" data-background-image="img/background-homepage.png" data-background-size="contain">
-					<h1>CETIC - BigData Platform<h1/>
-					<h2>BigData Platform for the NewTech4Steel Research Project</h2>
-					<h3>Alexandre Nuttinck / Fabian Steels - Software and Systems Technologies - 14 / 11 / 2018</h3>
-					<i> <small> alexandre.nuttinck@cetic.be / fabian.steels@cetic.be </small> </i>
+					<h1>Lambda Architecture Workshop<h1/>
+					<h2>Big Data Architecture</h2>
+					<h3>Térence Delsate / Fabian Steels - Software and Systems Technologies</h3>
+					<i> <small> terence.delsate@cetic.be / fabian.steels@cetic.be </small> </i>
 				</section>
 				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 					<script type="text/template">
-						#Summary
-						## What are OpenShift & Gitlab CI?
-						## Demo
-						## Benefits & Limitations
-						Slides available at <url>http://http://bigdataplatform-slides.openshift.ext.cetic.be</url> (need to be changed by the public URL)
+			### Content
+			* Challenges from Big Data
+			* Big Data architectures
+			* Big Data Platform proposed by CETIC
+			* Journey of a dataset
+ 			  * Up to the Cloud
+			  * Inside the cloud
+			* Visualisation tools
+			* Concluding remarks
+					</script>
+				</section>				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+					<script type="text/template">
+### Big data
+* Big Data / Challenge
+
+  - Large data volume / Storage
+  - Large data velocity / Avoid leakage
+  - Data unboundedness / overflow
+  - Data heterogeneity / dispatch
+  - Data unstructuredness / mining
+
+* End user challenges
+  - Need for availability
+  - Need for real-time analysis
+
+**Leads to new big data architectures**
+Note:
+Data unboundedness:
+* Volume a priori unkown
+* streamed data: don't know when or if ends
+
 					</script>
 				</section>
+
 				<section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 							<script type="text/template">
-							#### Cloud Computing - Service models
-							<img class="plain" data-src="img/cloud-services-models.png" />
-							<b>OpenShift</b>: Platform as a Service (PaaS) offering from Red Hat for container-based software deployment and management. 
+### Lambda architecture
+<small><a href="https://www.manning.com/books/big-data" target="_blank">“Big Data” by Nathan Marz, James Warren</a></small>
+
+<div>
+	<div height="30%">
+		<img class="plain" data-src="img/lambda/BigDataArchitecture-Lambda.png" alt="Lambda architecture" width=60%>
+	</div>
+	<div height="70%" >
+		<ul style="font-size:70%">
+			<li>an incoming data stream</li>
+			<li> a batch layer:</li>
+				<ul>
+	  			<li> buffers the stream to form a batch</li>
+	  			<li> the batch is processed</li>
+	  			<li> the result is sent to the view, available for queries</li>
+				</ul>
+			<li>a speed layer:</li>
+				<ul>
+	  			<li> the incoming stream is processed</li>
+	  			<li> the result is streamed to a realtime view, available for queries</li>
+				</ul>
+		</ul>
+	</div>
+</div>
 							</script>
 					</section>
+
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">								
-								OpenShift brings together [Docker](https://www.docker.com/) and [Kubernetes](https://kubernetes.io/), and provides an API to manage these services.
-								
-								<img class="plain" data-src="img/docker.png" />
-								<img class="plain" data-src="img/kubernetes.png" />
-							</script>
+						<script type="text/template">
+							### Lambda architecture use case
+<img class="plain" data-src="img/lambda/BigDataArchitecture-Lambda_Example_Use_1.png" alt="Lambda architecture">
+						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">								
-								#### Docker: 
-								
-								<img class="plain" data-src="img/docker.png" />
-								
-								* It helps you to develop, deploy, and manage <b>container</b>-based applications. 
-								* Containers are standalone processes that run within their own environment, independent of operating system and the underlying infrastructure. 
-							</script>
+						<script type="text/template">
+							### Lambda architecture use case
+<img class="plain" data-src="img/lambda/BigDataArchitecture-Lambda_Example_Use_2.png" alt="Lambda architecture">
+						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">
-								#### Kubernetes
-								<img class="plain" data-src="img/kubernetes.png" />
-								* An open-source system for 
-									* automating deployment,
-									* scaling,
-									* management of containerized applications.
-								* Kubernetes works with a range of container tools, including Docker.
-							</script>
-					</section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">
-								#### DevOps tools
-								<img class="plain" data-src="img/s2i2.png" />
-								
-								* OpenShift contains DevOps tools for <b> accelerated </b> application development.
-								* Easily turn source code into running applications with <b> source-to-image </b> capabilities.
-							</script>
+						<script type="text/template">
+							### Lambda architecture use case
+<img class="plain" data-src="img/lambda/BigDataArchitecture-Lambda_Example_Use_3.png" alt="Lambda architecture">
+						</script>
 					</section>
 				</section>
+
 				<section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 						<script type="text/template">
-							#### OpenShift
-							<img class="plain" data-src="img/openshiftarchi.png" />
+### Kappa architecture
+<small><a href="https://www.oreilly.com/ideas/questioning-the-lambda-architecture" target="_blank">“Questioning the Lambda Architecture”, Jay Kreps</a></small>
+<div>
+	<div height = "30%">
+		<img class="plain" data-src="img/kappa/BigDataArchitecture-Kappa.png" alt="Kappa architecture">
+	</div>
+	<div height="70%">
+		<ul>
+			<li> Simplification of the Lambda architecture:</li>
+  		<ul>
+				<li>no batch layer</li>
+				<li>Needs to abstract the batch / stream process in a single code</li>
+			</ul>
+			<li><b>But</b> The stream is replayable</li>
+  		<ul>
+				<li>Ability to reprocess data in case of processing code updates</li>
+				<li>Pushing code updates more straightforward</li>
+			</ul>
+		</ul>
+	</div>
+</div>
 						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-								<script type="text/template">
-									#### Deployment Strategies
-									* Principal strategy: Source-to-Image (S2I)
-									
-										* Official Images.
-										* Also possible to use customizing Images.
-										
-									<img class="plain" data-src="img/langage1.png" /> <img class="plain" data-src="img/langage2.png" /> <img class="plain" data-src="img/langage3.png" /> <img class="plain" data-src="img/langage4.png" /> <img class="plain" data-src="img/langage5.png" /> <img class="plain" data-src="img/langage6.png" /> 
-								</script>
-					</section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-								<script type="text/template">
-									#### S2I: Automated Build Process
-
-									<img class="plain" data-src="img/s2i.png" />
-									
-									<small> S2I produces ready-to-run images by injecting source code into a container and letting the container prepare that source code for execution. </small>
-									
-									<!-- <small> 
-									
-									1. Starts a container from the builder image.
-									2. Downloads the application source.
-									3. Streams the scripts and application sources into the builder image container.
-									4. Runs the assemble script (from the builder image).
-									5. Saves the final image. 
-									
-									</small> -->
-									
-								</script>
-					</section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-								<script type="text/template">
-									#### Other Deployment Strategies
-									* Docker Strategy
-										* Dockerfile
-									* Kubernetes files
-										* Deployment 
-										* Service
-								</script>
-					</section>
-				</section>
-				<section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-								### Gitlab CI
-								
-								<!-- * GitLab offers a continuous integration (CI) service ~ Gitlab CI. (Jenkins / Travis equivalent) -->
-								<!-- * Its goal in the development timelive is to reduce the time needed for developers to see if something went wrong.  -->
-								<img class="plain" data-src="img/gitlab-pipeline.png" />
-								<!-- * Most projects use this service to run the test suite so that developers get immediate feedback if they broke something. -->
-						</script>
-					</section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-								### .gitlab-ci.yml file
-								* By adding a .gitlab-ci.yml file to the root directory of your repository and configuring your GitLab project to use a Runner, then each commit or push, triggers your CI pipeline.
-								
-								* By default it runs a pipeline with three stages: <b> build</b>, <b> test</b>, and <b> deploy</b>.
-
-								<!-- * The .gitlab-ci.yml file tells the GitLab runner what to do. -->
-								
-								<!-- * If everything runs OK, you'll get a nice green checkmark associated with the commit. This makes it easy to see whether a commit caused any of the tests to fail before you even look at the code. -->
-
-								<!-- * There's a growing trend to use continuous delivery and continuous deployment to automatically deploy tested code to staging and production environments. -->
-
-								<!-- * Gitlab CI is going to be a center-piece for Continuous Integration (~as a Jenkins can do), it has become a popular framework for building Continuous Delivery pipelines that not only builds and tests the code changes but also pushes the change through various steps. -->
-						</script>
-					</section>
-					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-								### Gitlab Runner
-																
-								* A runner is basically a server that <b>executes</b> instructions listed in the .gitlab-ci.yml file, and reports the result back to GitLab itself. 
-								
-								* Two gitlab <b>shared</b> runners are setup for the Gitlab@CETIC
-									* shell strategy
-									* docker stategy (This one is running on OpenShift)
-								<!-- mentionner indépendance l'un peut aller sans l'autre -->
-						</script>
-					</section>
+							<script type="text/template">
+								### Kappa architecture use case
+<img class="plain" data-src="img/kappa/BigDataArchitecture-Kappa_Example_Use_1.png" alt="Kappa architecture">
+							</script>
+						</section>
 						<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-								### Gitlab Runner
-								<img class="plain" data-src="img/shared-runner.png" />
-						</script>
+								<script type="text/template">
+									### Kappa architecture use case
+<img class="plain" data-src="img/kappa/BigDataArchitecture-Kappa_Example_Use_2.png" alt="Kappa architecture">
+								</script>
+							</section>
+							<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+									<script type="text/template">
+										### Kappa architecture use case
+<img class="plain" data-src="img/kappa/BigDataArchitecture-Kappa_Example_Use_3.png" alt="Kappa architecture">
+									</script>
+								</section>
+								<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+										<script type="text/template">
+											### Kappa architecture use case
+<img class="plain" data-src="img/kappa/BigDataArchitecture-Kappa_Example_Use_4.png" alt="Kappa architecture">
+										</script>
+									</section>
 					</section>
-				</section>
+					<section>
+						<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+							<script type="text/template">
+								#### Our Proposition: An Architectural Toolkit
+								<div height=80%>
+									<img class="plain" data-src="img/archi/GrindingsViews-Simplified-logical-view.png" width=70%>
+								</div>
+							</script>
+						</section>
+						<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+							<script type="text/template">
+								#### Our Proposition: An Architectural Toolkit
+								- Is generic
+									- Includes stream processing by design
+									- Includes batch processing by design
+								- May includes both Kappa and Lambda
+								  - depending on the components implementation
+								- Multitenancy
+								- Relies on mature opensource projects
+								- Cloud agnostic
+
+							</script>
+						</section>
+					</section>
+
 				<section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">
-								####  Setup a CI/CD process by combining OpenShift and Gitlab CI
-								<img class="plain" data-src="img/openshift1.png" />
+						<script type="text/template">
+							#### From the premise to the cloud
+							<div style="display:table">
+								<div style="display:table-cell">
+									<img class="plain" data-src="img/archi/GrindingsViews-components-premise.png" width=150%>
+								</div>
+							<div style="display:table-cell; font-size:80%; vertical-align:middle">
+								<ul>
+									<li> Streaming layer</li>
+										<ul>
+											<li>Datae are collected on-site</li>
+												<ul>
+													<li>Sensors: data producers</li>
+													<li>Machines: monitored units</li>
+												</ul>
+										</ul>
+									<li>Static layer</li>
+									<ul>
+										<li> On-site stores, e.g.
+											<ul>
+												<li>Machine/Sensors informations</li>
+												<li>Product Metadatae</li>
+											</ul>
+									</ul>
+								</ul>
+							</div>
+						</div>
+						</script>
+					</section>
+
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							#### From the premise to the cloud
+							<div style="display:table">
+								<div style="display:table-cell">
+									<img class="plain" data-src="img/archi/GrindingsViews-components-ingestion.png" width=150%>
+								</div>
+							<div style="display:table-cell; font-size:80%; vertical-align:middle">
+								<ul>
+									<li>API gateway (e.g. Kong)</li>
+										<ul>
+											<li>Entry point for the static layer</li>
+											<li>Bi-directional gateway for pulling/pushing static information </li>
+										</ul>
+									<li>Cloud gateway</li>
+									<ul>
+										<li>Entry point for the streaming layer (e.g. Azure IoT hub, AWS IoT, Kura, mqtt)
+											<ul>
+												<li>e.g. Message broker, online IOT endpoints... </li>
+											</ul>
+									</ul>
+									<li>Device management</li>
+									<ul>
+										<li>Edit properties of the devices</li>
+									</ul>
+									<li>Data flow management (based on the Entreprise Integration Patterns: e.g. Nifi, Camel)</li>
+										<ul>
+											<li>Connects to the gateways</li>
+											<li>Unifies static and streamed layers output</li>
+											<li>drives data following the treatment (routing)</li>
+										</ul>
+								</ul>
+							</div>
+						</div>
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							#### In the cloud: Journey of a measurement
+							###### Analysis layer
+							<div>
+								<div height = "30%">
+									<img class="plain" data-src="img/archi/GrindingsViews-components-analysis.png" alt="Processing" width="40%">
+								</div>
+								<div style="font-size:80%">
+									<ul>
+										<li> Ingested datae are backed up in a <b>Data Lake</b> (e.g. fs, mongoDB, openTSDB, PaaS)</li>
+										<ul>
+										 	<li>Allows for replays or experimentations (see next)</li>
+											<li>Batch processes will load data from the data lake</li>
+										</ul>
+									 	<li>Broker (e.g. Kafka, Pulsar): Entry point, distributed, resiliant (see next presentation)</li>
+									 	<li>Extract - Transform - Load (ETL) layer (e.g. scripts, Beam, Flink, Spark): preprocessing of the raw datae</li>
+										<ul>
+										- processed data are sent back to the broker in a different topic (can be another broker)
+										</ul>
+									 	<li>The cleaned stream is processed in the <b>Stream Processor</b> layer (e.g. Spark, Flink, Beam)</li>
+									</ul>
+								</div>
+							</div>
+						</script>
+					</section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							###### Storage and views layer
+							<div>
+								<div height = "30%">
+									<img class="plain" data-src="img/archi/GrindingsViews-LogicalView_Storage_View.png" alt="Processing" width="50%">
+								</div>
+								<div style="font-size:70%">
+									<ul>
+										<li> Processed data are stored on the <b>Datawarehouse</b> (DWH) (e.g. PgSQL, Open TSDB, Cassandra)</li>
+										<li> The DWH is exposed to
+										<ul>
+											<li> a <b>Business Intelligence</b> (BI) tool (e.g. Tableau, Superset) for visualisation and analysis
+											<li> a monitoring tool for continuous check of the data stream (e.g. Grafana)</li>
+											<li> a data exploration / model building layer (e.g. Jupyter, Zeppelin)</li>
+										</ul>
+
+										<li>The DWH contains the properly formatted and, filtered and processed datae</li>
+										<li>The data lake contains raw datae, accessible to the data exploration layer</li>
+									</ul>
+								</div>
 							</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">
-								####  Setup a CI/CD process by combining OpenShift and Gitlab CI
-								<img class="plain" data-src="img/openshift2.png" />
+						<script type="text/template">
+							###### Data exploration and model building
+							<div>
+								<div height = "30%">
+									<img class="plain" data-src="img/archi/GrindingsViews-LogicalView_Storage_View.png" alt="Processing" width="50%">
+								</div>
+								<div style="font-size:70%">
+									<ul>
+										<li> After data exploration, the analysis models can be updated
+										<li> Sent to the <b>model repository</b> (e.g. Nexus)
+										<li> ETL, Stream and batch processing layers are fed by the model repo
+									</ul>
+								</div>
 							</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							#### Data visualisation: BI
+
+							<table align="center" style="margin-left: auto; margin-right: auto;">
+								<tr>
+									<td style="vertical-align:middle" width="40%">
+										<a href="https://superset.incubator.apache.org/"><img class="plain" data-src="img/superset/bank_dash.png" alt="BI Viz"></a>
+									</td>
+									<td style="vertical-align:middle; text-align:center">
+										<ul>
+										 <li> Exploration of the DWH</li>
+										 <li> Report generation</li>
+										 <li> Data aggregations</li>
+										 <li> Multiple sources</li>
+										 <li> Example tools:</li>
+										 <ul>
+											 <li>Apache Superset</li>
+											 <li>Tableau</li>
+											 <li>JasperSoft </li>
+										 </ul>
+										</ul>
+									</td>
+								</tr>
+						</table>
+						</script>
 					</section>
 					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">
-								####  Setup a CI/CD process by combining OpenShift and Gitlab CI
-								<img class="plain" data-src="img/openshift3.png" />
-							</script>
+						<script type="text/template">
+							#### Data visualisation: Monitoring
+<table>
+	<tr>
+		<td width="70%" style="vertical-align:middle; border:0px">
+			<a href="https://grafana.com/dashboards/1701"><img class="plain" data-src="img/grafana/grafana.png" alt="Monitoring Viz"></a>
+		</td>
+		<td  style="vertical-align:middle; border:0px">
+			<ul>
+			 	<li> Live status</li>
+			 	<li> Health check</li>
+			 	<li> Display alarms</li>
+			 	<li> Example: Grafana</li>
+			</ul>
+		</td>
+	</tr>
+</table>
+						</script>
+					</section>
+
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							#### Data visualisation: Data Exploration
+							<table>
+								<tr>
+									<td style="vertical-align:middle" width="60%">
+										<img class="plain" data-src="img/jupyter/jupyter-view.png" alt="Exploration Viz">
+									</td>
+									<td style="vertical-align:middle">
+										<ul>
+											<li> Load data</li>
+											<li> Test & build models</li>
+											<li> Prepare views in DWH</li>
+											<li> Example: Jupyter, Apache Zeppelin</li>
+										</ul>
+									</td>
+								</tr>
+								</table>
+						</script>
+					</section>
+
+				</section>
+
+				<section>
+					<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+						<script type="text/template">
+							#### Example implementation
+<img class="plain" data-src="img/archi/GrindingsViews-Implementation View.png" alt="Monitoring Viz" width="62%"></a>
+						</script>
 					</section>
 				</section>
-				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							#### Apps already running on OpenShift@CETIC
-							
-							|Apps|| URL |
-							| :--: || :--: | 
-							|Gitlab Runner|| |
-							|Oscar-SaaS|| http://api-oscar-saas.openshift.ext.cetic.be |
-							|LimeSurvey|| http://security-audit.openshift.ext.cetic.be |
-							|TSimulus microservice|| public url: http://tsimulus.openshift.cetic.be |
-							|Monitoring of the CETIC's building||https://prom-naboo.openshift.ext.cetic.be |
-							|Slides presented today||http://demo-slides.openshift.ext.cetic.be |
-							|Jenkins|| |
-							
-						</script>
-				</section>
-				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							### Quick Tour
-							|![openshift-oscar-saas2.png](img/openshift-oscar-saas.png)|![gitlab-ci.png](img/gitlab-ci.png)|
-							| :--: | :--: | 
-							| *OpenShift Interface* | *Gitlab CI* |
-						</script>
-				</section>
-				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							###  Demo of the CI/CD process in action
-							
-							<!---
-							<iframe src="https://giphy.com/embed/KpACNEh8jXK2Q" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>
-							Make that monkey happy by giving him OpenShift!
-							-->
-							
-							<iframe src="https://giphy.com/embed/T8Dhl1KPyzRqU" width="480" height="330" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>
-							Our monkey is now a professional developer!	
-							
-						</script>
-				</section>
-				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">
-								### Benefits of using OpenShift
-								
-								* <p class="fragment">Speed, creating an environment in minutes, **ready to deploy**. </p>
-								
-								* <p class="fragment">Git integration.</p>
-								* <p class="fragment">Works really well when running Standalone Docker and microservice-based apps. </p>	
-								* <p class="fragment">**DevOps** process: application builds, deployments, scaling and health management. </p>
-								* <p class="fragment">Contrary to Docker and Kubernetes, Openshift is **secure** by default which requires developers to use secure Docker containers. </small> </p>
-								* <p class="fragment">**Elasticity**: Infrastructure + Applications.</p>
-								<!--	* <p class="fragment"> OpenShift Infrastructure can be extended, downsized, or migrated as needed. </p>
-									* <p class="fragment"> Servers can be added or removed on the fly, the data is rebalanced through the cluster, remains available and there is no interruption of applications. </p> -->
-								* <p class="fragment">** High Availability **: Auto-Create and Auto-Scaling Tools.</p>
-								* <p class="fragment">**Opensource**: big community, 4,455*, ... </p>
-							</script>
-				</section>	
-				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							### Limitations of using OpenShift
 
-							<!-- * <p class="fragment"> For more complex applications with dependences between containerized applications, some knowledge of Kubernetes is required. </p> -->
-							* <p class="fragment"> The "docker-compose up" command from Docker is not working with OpenShift, it needs to translate the docker-compose file into Kubernetes files. </p>
-								
-								* <p class="fragment"> [Kompose](http://kompose.io/) can do the job, but this framework is not yet full stable. </p>
-							
-							* <p class="fragment"> Not adapted to work with monolithic applications demanding a lot of computing resources. </p>
-						</script>
-				</section>
-				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							* <i>  When should I use OpenShift instead of asking for a VM? </i>
-								* If you want to try a PaaS with containers.
-								* If you have a microservice application to deploy.
-
-							* <i> When should I not use OpenShift? </i>
-								* When your application is heavy in terms of cpu/storage/memory: currently the OpenShift cluster is not very big and is intented for testing purposes.
-						</script>
-				</section>
-				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-						### Your turn!
-						
-						##### Prerequisites
-						* You must be able to access to the running instance of OpenShift Origin. (https://openshift.ext.cetic.be:8443)
-						
-						The login and password used for OpenShift are your LDAP credentials. (same as your Office 365 account)
-						
-						* You must have the OpenShift Origin CLI downloaded and installed (https://www.openshift.org/download.html), if you want to use OpenShift in command line.
-						</script>
-				</section>
 				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
 					<script type="text/template">
-						### Future Improvements
-						* Provide a documentation.
-						* Use OpenShift in research projects and missions.
-						* Add more phases in the CI process (sonar, CAST, scalability and security tests ...).
-						* Monitor OpenShift resources (with Prometheus and Grafana).
-						* Blog article.
-						* ...
-					</script>
-				</section>
-				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-					<script type="text/template">
-						### Sources
-						* https://www.openshift.org/
-						* https://kubernetes.io/
-						* https://about.gitlab.com/2018/01/22/a-beginners-guide-to-continuous-integration/
-						* https://blog.openshift.com/openshift-cloudbees-jenkins-enterprise-devops/
-						* https://blog.openshift.com/cicd-with-openshift/
-						* https://developers.redhat.com/blog/2016/09/22/development-workflows-with-fuse-integration-services-fis/
-					</script>
-				</section>
-				<section class="lastpage" data-background-image="img/background-lastpage.png">
-					<table>
-						<tr>
-							<td style="width: 50%; text-align: center;">
-								<a href="https://www.cetic.be" /><img class="plain" data-src="img/logo-cetic.png" /></a><br /><br />
-								<small>Aéropole de Charleroi-Gosselies <br />
-								Avenue Jean Mermoz 28 <br />
-								B-6041 Charleroi - Belgique <br /></small>
-								<p><iframe width="640" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" data-src="http://www.openstreetmap.org/export/embed.html?bbox=4.473830759525299%2C50.47422046442369%2C4.477371275424957%2C50.475966719544715&amp;layer=mapnik" style="border: 1px solid black"></iframe></p>
-								<table>
-									<tr>
-										<td rowspan="2"><img class="plain" data-src="img/icon-twitter.png" /></td>
-										<td>
-											<a href="twitter.com/@CETIC">
-												twitter.com/@CETIC
-												<img class="plain" style="margin: 0 5px" data-src="img/icon-flag-french.png" />
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<a href="https://www.twitter.com/@CETIC_be">
-												twitter.com/@CETIC_be
-												<img class="plain" style="margin: 0px 5px" data-src="img/icon-flag-english.png" />
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<img class="plain" data-src="img/icon-linkedin.png" />
-										</td>
-										<td>
-											<a href="https://www.linkedin.com/company/cetic">
-												linkedin.com/company/cetic
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<img class="plain" data-src="img/icon-mail.png" />
-										</td>
-										<td>
-											<a href="mailto:info@cetic.be">
-												info@cetic.be
-											</a>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<img class="plain" data-src="img/icon-phone.png" />
-										</td>
-										<td>
-											+32 71 490 700
-										</td>
-									</tr>
-								</table>
-							</td>
-							<td style="text-align: center">
-								<h3>Continuous Integration with OpenSHift and Gitlab CI</h3>
-								<br />
-								<br />
-								<br />
-								<table style="width: 100%">
-									<tr>
-										<td style="text-align: center"><h3>Alexandre Nuttinck</h3></td>
-									</tr>
-									<tr>
-										<td style="text-align: center"><h4>Research Engineer</h4></td>
-									</tr>
-									<tr>
-										<td style="text-align: center">alexandre.nuttinck@cetic.be</td>
-									</tr>
-									<tr>
-										<td style="text-align: center">+32 495 22 66 10</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-					</table>
-				</section>
+#### Our architecture is
+
+* A generic architecture:
+	- skip batch layer + Kafka with resiliance: Kappa architecture
+	- Keeping all components: Lambda architectures
+* toolkit
+  - Provide default settings including many tools
+* Modular
+	- Each components can be replaced in your own deployment
+* Service
+  - Implements a platform as a service (PaaS)
+  - Will be available directly in our cloud
+  - Can be deployed anywhere
+			</script>
+		</section>
+		<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+			<script type="text/template">
+#### Our architecture is portable
+
+- Doesn't rely on proprietary technologies
+- Adaptable to any cloud provider
+- Cloud agnostic
+- Avoid vendors locking
+- Broadly supported software
+	</script>
+</section>
 			</div>
 		</div>
 
