@@ -19,3 +19,6 @@ It uses the reveal.js framework: https://github.com/hakimel/reveal.js/
 ### Authors
 
 * **Alexandre Nuttinck** : alexandre.nuttinck@cetic.be
+* **Fabian Steels**
+* **Sebastien Dupont** 
+* **Terence Delsate**
