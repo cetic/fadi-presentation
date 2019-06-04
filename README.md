@@ -1,5 +1,7 @@
 # BigData Platform Presentation
 
+![](https://raw.githubusercontent.com/cetic/fadi/master/doc/logo.png)
+
 ## Goal
 
 Slides presentation of the FADI BigData Platform.
