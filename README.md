@@ -2,11 +2,11 @@
 
 ## Goal
 
-Slides presentation of the BigData Platform for the Newtech4Steel project
+Slides presentation of the FADI BigData Platform.
 
-These slides are available on OpenShift at http://bigdataplatform-slides.openshift.ext.cetic.be/#/
+These slides are available at https://fadi.presenations.cetic.be (TODO: currently still on https://bigdataplatform.presentations.cetic.be)
 
-The slides are automatically deployed to OpenShift when there is a commit on the `develop` branch. (See the gitlab-ci file)
+The slides are automatically deployed to OpenShift when there is a commit on the `develop` branch. (See the [gitlab-ci file](.gitlab-ci.yml))
 
 ## Reveal.js
 
@@ -14,11 +14,10 @@ This presentation is based on the CETIC reveal theme here: https://cetic.github.
 
 It uses the reveal.js framework: https://github.com/hakimel/reveal.js/
 
-### References
 
-### Authors
+## Authors
 
-* **Alexandre Nuttinck** : alexandre.nuttinck@cetic.be
-* **Fabian Steels**
-* **Sebastien Dupont** 
-* **Terence Delsate**
+* **Alexandre Nuttinck** - alexandre.nuttinck@cetic.be
+* **Fabian Steels** - fabian.steels@cetic.be
+* **Sebastien Dupont** - sebastien.dupont@cetic.be
+* **Terence Delsate** - terence.delsate@cetic.be
