@@ -12,7 +12,7 @@ variables:
 .deploy: &deploy
   before_script:
     - oc login "$OPENSHIFT_SERVER" --token="$OPENSHIFT_TOKEN" --insecure-skip-tls-verify
-    - oc project "bigdataplatform-slides"
+    - oc project "fadi-presentation"
   script:
     - "oc get services $APP 2> /dev/null || oc new-app openshift/nodejs:6~. --name=$APP"
     - "oc start-build $APP --from-dir=. --follow || sleep 3s"
@@ -24,10 +24,10 @@ develop:
   tags:
     - docker
   variables:
-    APP: bigdataplatform-slides
-    APP_HOST: bigdataplatform-slides.$OPENSHIFT_DOMAIN
+    APP: fadi-presentation
+    APP_HOST: fadi-presentation.$OPENSHIFT_DOMAIN
   environment:
     name: develop
-    url: http://bigdataplatform-slides.$OPENSHIFT_DOMAIN
+    url: http://fadi-presentation.$OPENSHIFT_DOMAIN
   except:
     - master

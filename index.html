@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>CETIC - BigData Platform</title>
+		<title>CETIC - FADI</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/cetic.css">
@@ -25,176 +25,229 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section class="homepage" data-background-image="img/theme/cetic/background-homepage.png" data-background-size="contain">
-					<h1>Lambda Architecture Workshop<h1/>
-					<h2>Big Data Architecture</h2>
-					<h3>Térence Delsate / Fabian Steels - Software and Systems Technologies</h3>
-					<i> <small> terence.delsate@cetic.be / fabian.steels@cetic.be </small> </i>
-				</section>
-				<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+				<section data-markdown class="homepage" data-background-image="img/theme/cetic/background-homepage.png" data-background-size="contain">
 					<script type="text/template">
-			### Content
-			* Challenges from Big Data
-			* Big Data architectures
-			* Big Data Platform proposed by CETIC
-			* Journey of a dataset
- 			  * Up to the Cloud
-			  * Inside the cloud
-			* Visualisation tools
-			* Concluding remarks
-					</script>
-				</section>				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-					<script type="text/template">
-### Big data
-* Big Data / Challenge
-
-  - Large data volume / Storage
-  - Large data velocity / Avoid leakage
-  - Data unboundedness / overflow
-  - Data heterogeneity / dispatch
-  - Data unstructuredness / mining
-
-* End user challenges
-  - Need for availability
-  - Need for real-time analysis
-
-**Leads to new big data architectures**
-Note:
-Data unboundedness:
-* Volume a priori unkown
-* streamed data: don't know when or if ends
-
+<img data-src="img/fadi_logo.png" alt="FADI logo" style="margin-top: -100px" />
+# A framework for big data analytics
+[https://fadi.cetic.be](https://fadi.cetic.be)
 					</script>
 				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+# Table of contents
 
-				<section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">
-### Lambda architecture
-<small><a href="https://www.manning.com/books/big-data" target="_blank">“Big Data” by Nathan Marz, James Warren</a></small>
+1. [Context](#/context)
+2. [Architecture](#/architecture)
+3. [Sample use case](#/usecase)
+4. [Conclusion](#/conclusion)
+5. [References](#/references)
+					</script>
+				</section>
+				<section id="context" >
+					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+						<script type="text/template">
+# 1. Context
 
-<div>
-	<div height="30%">
+* 1.1. Big data challenges
+* 1.2. Specifications - platform features
+* 1.3. Specifications - platform actors
+* 1.4. Specifications - non functional
+
+&darr;
+						</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+	## 1.1. Big Data Challenges
+
+	The `V's` of big data:
+
+	* **Volume**
+	* **Velocity**
+	* **Variety**
+	* Value, Veracity, Volativity, Vade retro, ...
+
+	**Leads to specialised big data architectures**
+
+	Note:
+	* TODO: map a generic, interesting and memorable use case to those features
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+	## 1.2. Specifications - Platform features
+
+	* <img src="img/bucket.svg" height="32px" style="vertical-align: bottom;"/> **batch** and <img src="img/tap.svg" height="24px" style="vertical-align: bottom;"/> **streaming** analysis
+	* <img src="img/graph.svg" height="32x" style="vertical-align: bottom;"/> configurable **user interface** for reporting of data analysis (notebooks, dashboards, ...)
+	* <img src="img/bell.svg" height="32px" style="vertical-align: bottom;"/> anomaly detection with **alerting** mechanisms
+	* <img src="img/multitenancy.svg" height="32px" style="vertical-align: bottom;"/>**multi-tenancy** to provide data isolation while avoiding cloned IT environments
+
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+	## 1.3. Specifications - Platform actors
+
+	* business analysts
+	* data scientists
+	* factory operators
+	* tenant administrator
+	* system administrator
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+	## 1.4. Specifications - Non functional
+
+	* **availability**: scalability, resilience, monitoring, load testing
+	* **portability**: deployment on premises, in a public cloud, hybrid, …
+	* **installability**: automated continuous deployment and integration
+	* modular, extensible (API’s), responsive web interfaces, open source, operation costs, ...
+	* ...
+					</script>
+				</section>
+
+			</section>
+			<section id=architecture">
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+	# 2. Architecture
+	* 2.1. Big data architecture patterns
+	* 2.2. Logical view
+	* 2.3. Implementation view
+	* 2.4. Deployment views
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+		## 2.1. Big data architecture patterns
+		### The Lambda architecture
+		[“Big Data” by Nathan Marz, James Warren](https://www.manning.com/books/big-data)
+
 		<img class="plain" data-src="img/lambda/BigDataArchitecture-Lambda.png" alt="Lambda architecture" width=60%>
-	</div>
-	<div height="70%" >
-		<ul style="font-size:70%">
-			<li>an incoming data stream</li>
-			<li> a batch layer:</li>
-				<ul>
-	  			<li> buffers the stream to form a batch</li>
-	  			<li> the batch is processed</li>
-	  			<li> the result is sent to the view, available for queries</li>
-				</ul>
-			<li>a speed layer:</li>
-				<ul>
-	  			<li> the incoming stream is processed</li>
-	  			<li> the result is streamed to a realtime view, available for queries</li>
-				</ul>
-		</ul>
-	</div>
-</div>
-							</script>
-					</section>
+		* incoming data stream
+		* **batch layer**: buffer stream to form a batch, process batch, send result to the view
+		* **speed layer**: process incoming data stream and stream the result to a real time view
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+	## 2.1. Big data architecture patterns
+	### Data lake / data warehouse
+	* **data lake** contains original raw ingested data (audit, replay, experiments, ...)
+	* **data warehouse** stores aggregated views of the various data
+	* aggregated at ingestion time (stream) or on demand (batch)
+	* views correspond to frequent queries on the data
 
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							### Lambda architecture use case
-<img class="plain" data-src="img/lambda/BigDataArchitecture-Lambda_Example_Use_1.png" alt="Lambda architecture">
-						</script>
-					</section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							### Lambda architecture use case
-<img class="plain" data-src="img/lambda/BigDataArchitecture-Lambda_Example_Use_2.png" alt="Lambda architecture">
-						</script>
-					</section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-							### Lambda architecture use case
-<img class="plain" data-src="img/lambda/BigDataArchitecture-Lambda_Example_Use_3.png" alt="Lambda architecture">
-						</script>
-					</section>
+	| | Data warehouse | Data lake |
+	|----|----|----|
+	| **data** | structured, processed | raw |
+	| **storage** | expensive, fast | cheap, slow |
+	| **flexibility** | fixed schema | free organisation |
+
+	&#128279;[More on Big Data architecture patterns](https://bigdataplatform.presentations.cetic.be)
+
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+	## 2.1. Big data architecture patterns
+	### Message queuing
+
+	* Connect heterogeneous applications
+	* Support disparate protocols
+	* Provides various messenging patterns: message transform, aggregation, splitting, routing, buffering, ...
+
+	<img src="img/broker.png" alt="Message broker pattern"/>
+
+	&#128279;[More on message queues and brokers](https://messagebrokers.presentations.cetic.be)
+
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						## 2.2. Logical view - simplified
+						<img class="plain" data-src="img/archi/FADI-logical-simplified.png" alt="FADI logical view - simplified" width=50% />
+					</script>
 				</section>
 
-				<section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-						<script type="text/template">
-### Kappa architecture
-<small><a href="https://www.oreilly.com/ideas/questioning-the-lambda-architecture" target="_blank">“Questioning the Lambda Architecture”, Jay Kreps</a></small>
-<div>
-	<div height = "30%">
-		<img class="plain" data-src="img/kappa/BigDataArchitecture-Kappa.png" alt="Kappa architecture">
-	</div>
-	<div height="70%">
-		<ul>
-			<li> Simplification of the Lambda architecture:</li>
-  		<ul>
-				<li>no batch layer</li>
-				<li>Needs to abstract the batch / stream process in a single code</li>
-			</ul>
-			<li><b>But</b> The stream is replayable</li>
-  		<ul>
-				<li>Ability to reprocess data in case of processing code updates</li>
-				<li>Pushing code updates more straightforward</li>
-			</ul>
-		</ul>
-	</div>
-</div>
-						</script>
-					</section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">
-								### Kappa architecture use case
-<img class="plain" data-src="img/kappa/BigDataArchitecture-Kappa_Example_Use_1.png" alt="Kappa architecture">
-							</script>
-						</section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-								<script type="text/template">
-									### Kappa architecture use case
-<img class="plain" data-src="img/kappa/BigDataArchitecture-Kappa_Example_Use_2.png" alt="Kappa architecture">
-								</script>
-							</section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-									<script type="text/template">
-										### Kappa architecture use case
-<img class="plain" data-src="img/kappa/BigDataArchitecture-Kappa_Example_Use_3.png" alt="Kappa architecture">
-									</script>
-								</section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-										<script type="text/template">
-											### Kappa architecture use case
-<img class="plain" data-src="img/kappa/BigDataArchitecture-Kappa_Example_Use_4.png" alt="Kappa architecture">
-										</script>
-									</section>
-					</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+		## 2.2. Logical view - full
+		<img class="plain" data-src="img/archi/FADI-logical.png" alt="FADI logical view" width=50% />
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+		## 2.3. Implementation view
+		<img class="plain" data-src="img/archi/FADI-implementation.png" alt="FADI implementation view" width=50% />
+					</script>
+				</section>
+
+
+			</section>
+			<section id="usecase">
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+# 3. Sample Use Case
+					</script>
+				</section>
+			</section>
+			<section id="conclusion">
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+# 4. Conclusion
+> The FADI project is dedicated to making the deployment of Big Data tools simple, portable and scalable. The goal is to provide a straightforward way to deploy open-source systems for Big Data to various infrastructures (private and public clouds).
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+# 4. Conclusion
+
+More on FADI:
+* **Usage** documentation: https://github.com/cetic/fadi/README.md
+* **Installation** instructions: https://github.com/cetic/fadi/INSTALL.md
+* **Support** (questions, problems, feature requests, ...):
+	* https://github.com/cetic/fadi/issues/new
+	* [fadi@lists.cetic.be](mailto:fadi@lists.cetic.be)
+					</script>
+				</section>
+			</section>
+			<section id=references">
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+# 5. References
+* [P. Kruchten, Architectural Blueprints - The "4+1" View Model of Software Architecture](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf)
+	* WIP [A presentation on the 4+1 methodology at CETIC (FR)](https://architecture.presentations.cetic.be)
+					</script>
+				</section>
+			<section>
+			<section id=references">
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+# 6. Team and thanks
+
+* Amen Ayadi
+* Annick Majchrowski
+* Alexandre Nuttinck
+* Fabian Steels
+* Maher Badri
+* Mathieu Goeminne
+* Nikolaos Matskanis
+* Rami sellami
+* Sebastien Dupont
+* Stephane Mouton
+* Terence Delsate
+
+					</script>
+				</section>
+			<section>
 					<section>
-						<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">
-								#### Our Proposition: An Architectural Toolkit
-								<div height=80%>
-									<img class="plain" data-src="img/archi/GrindingsViews-Simplified-logical-view.png" width=70%>
-								</div>
-							</script>
-						</section>
-						<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-							<script type="text/template">
-								#### Our Proposition: An Architectural Toolkit
-								- Is generic
-									- Includes stream processing by design
-									- Includes batch processing by design
-								- May includes both Kappa and Lambda
-								  - depending on the components implementation
-								- Multitenancy
-								- Relies on mature opensource projects
-								- Cloud agnostic
-
-							</script>
 						</section>
 					</section>
 
 				<section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 						<script type="text/template">
 							#### From the premise to the cloud
 							<div style="display:table">
@@ -225,7 +278,7 @@ Data unboundedness:
 						</script>
 					</section>
 
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 						<script type="text/template">
 							#### From the premise to the cloud
 							<div style="display:table">
@@ -264,7 +317,7 @@ Data unboundedness:
 				</section>
 
 				<section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 						<script type="text/template">
 							#### In the cloud: Journey of a measurement
 							###### Analysis layer
@@ -290,7 +343,7 @@ Data unboundedness:
 							</div>
 						</script>
 					</section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 						<script type="text/template">
 							###### Storage and views layer
 							<div>
@@ -313,7 +366,7 @@ Data unboundedness:
 								</div>
 							</script>
 					</section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 						<script type="text/template">
 							###### Data exploration and model building
 							<div>
@@ -332,7 +385,7 @@ Data unboundedness:
 				</section>
 
 				<section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 						<script type="text/template">
 							#### Data visualisation: BI
 
@@ -359,7 +412,7 @@ Data unboundedness:
 						</table>
 						</script>
 					</section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 						<script type="text/template">
 							#### Data visualisation: Monitoring
 <table>
@@ -380,7 +433,7 @@ Data unboundedness:
 						</script>
 					</section>
 
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 						<script type="text/template">
 							#### Data visualisation: Data Exploration
 							<table>
@@ -404,7 +457,7 @@ Data unboundedness:
 				</section>
 
 				<section>
-					<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 						<script type="text/template">
 							#### Example implementation
 <img class="plain" data-src="img/archi/GrindingsViews-Implementation View.png" alt="Monitoring Viz" width="62%"></a>
@@ -412,7 +465,7 @@ Data unboundedness:
 					</section>
 				</section>
 
-				<section data-markdown data-background-image="img/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 #### Our architecture is
 
@@ -429,17 +482,23 @@ Data unboundedness:
   - Can be deployed anywhere
 			</script>
 		</section>
-				<section data-markdown data-background-image="img/theme/cetic/logo-cetic.png" data-background-position="98% 2%" data-background-size="10%">
-			<script type="text/template">
-#### Our architecture is portable
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						#### Our architecture is portable
 
-- Doesn't rely on proprietary technologies
-- Adaptable to any cloud provider
-- Cloud agnostic
-- Avoid vendors locking
-- Broadly supported software
-	</script>
-</section>
+						- Doesn't rely on proprietary technologies
+						- Adaptable to any cloud provider
+						- Cloud agnostic
+						- Avoid vendors locking
+						- Broadly supported software
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						## Special thanks/ team?
+
+					</script>
+				</section>
 			</div>
 		</div>
 

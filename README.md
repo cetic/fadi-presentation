@@ -6,7 +6,7 @@
 
 Slides presentation of the FADI BigData Platform.
 
-These slides are available at https://fadi.presenations.cetic.be (TODO: currently still on https://bigdataplatform.presentations.cetic.be)
+These slides are available at https://fadi.presentaions.cetic.be (TODO: currently still on https://bigdataplatform.presentations.cetic.be)
 
 The slides are automatically deployed to OpenShift when there is a commit on the `develop` branch. (See the [gitlab-ci file](.gitlab-ci.yml))
 
@@ -16,6 +16,9 @@ This presentation is based on the CETIC reveal theme here: https://cetic.github.
 
 It uses the reveal.js framework: https://github.com/hakimel/reveal.js/
 
+## References
+
+Icons are mostly from https://svgsilh.com (CC0)
 
 ## Authors
 
