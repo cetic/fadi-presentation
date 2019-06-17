@@ -5,8 +5,8 @@
     "js/reveal.js",
     "css/reveal.css"
   ],
-  "description": "Openshift Presentation",
-  "homepage": "http://demo-slides.openshift.ext.cetic.be",
+  "description": "FADI presentation",
+  "homepage": "http://fadi-presentation.openshift.ext.cetic.be",
   "license": "MIT",
   "author": {
     "name": "Alexandre Nuttinck",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.cetic.be/OpenShift/slides.git"
+    "url": "https://git.cetic.be/fadi/fadi-presentation.git"
   },
   "ignore": [
     "**/.*",
