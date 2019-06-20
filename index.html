@@ -70,17 +70,17 @@
 	**Leads to specialised big data architectures**
 
 	Note:
-	* TODO: map a generic, interesting and memorable use case to those features
+	* TODO: map a generic, interesting / memorable / pertinent use case to those features
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 	## 1.2. Specifications - Platform features
 
-	* <img src="img/bucket.svg" class="plain" height="32px" style="vertical-align: bottom;"/> **batch** and <img src="img/tap.svg" height="24px" style="vertical-align: bottom;"/> **streaming** analysis
-	* <img src="img/graph.svg" class="plain" height="32x" style="vertical-align: bottom;"/> configurable **user interface** for reporting of data analysis (notebooks, dashboards, ...)
-	* <img src="img/bell.svg" class="plain" height="32px" style="vertical-align: bottom;"/> anomaly detection with **alerting** mechanisms
-	* <img src="img/multitenancy.svg" class="plain" height="32px" style="vertical-align: bottom;"/>**multi-tenancy** to provide data isolation while avoiding cloned IT environments
+	* <img src="img/bucket.svg" class="plain" height="32px" style="margin-bottom:0px;"/> **batch** and <img src="img/tap.svg" class="plain" height="24px" style="margin-bottom:0px;"/> **streaming** analysis
+	* <img src="img/graph.svg" class="plain" height="32x" style="margin-bottom:0px;"/> configurable **user interface** for reporting of data analysis (notebooks, dashboards, ...)
+	* <img src="img/bell.svg" class="plain" height="32px" style="margin-bottom:0px;"/> anomaly detection with **alerting** mechanisms
+	* <img src="img/multitenancy.svg" class="plain" height="32px" style="margin-bottom:0px;"/>**multi-tenancy** to provide data isolation while avoiding cloned IT environments
 
 					</script>
 				</section>
@@ -91,8 +91,9 @@
 	* business analysts
 	* data scientists
 	* factory operators
-	* tenant administrator
-	* system administrator
+	* tenant administrators
+	* system administrators
+	* ...
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
@@ -116,20 +117,151 @@
 	* 2.2. Logical view
 	* 2.3. Implementation view
 	* 2.4. Deployment views
-					</script>
-				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-					<script type="text/template">
-		## 2.1. Big data architecture patterns
-		### The Lambda architecture
-		[“Big Data” by Nathan Marz, James Warren](https://www.manning.com/books/big-data)
 
-		<img class="plain" data-src="img/lambda/BigDataArchitecture-Lambda.png" alt="Lambda architecture" width=60%>
-		* incoming data stream
-		* **batch layer**: buffer stream to form a batch, process batch, send result to the view
-		* **speed layer**: process incoming data stream and stream the result to a real time view
+	&darr;
+
 					</script>
 				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="fade-in none-out">
+					<script type="text/template">
+                    ## 2.1. Big data architecture patterns
+                    ### The Lambda architecture
+
+                    [“Big Data” by Nathan Marz, James Warren](https://www.manning.com/books/big-data)
+
+                    <img class="plain" data-src="img/archi/lambda.svg" alt="Lambda architecture">
+                    * **incoming data stream**
+                    * **batch layer**: buffer stream to form a batch, process batch, send result to the view
+                    * **speed layer**: process incoming data stream and stream the result to a real time view
+
+                    Notes:
+                    * an **incoming data stream**
+                    * a **batch layer**:
+                        * buffers the stream to form a batch
+                        * the batch is processed
+                        * the result is sent to the view, available for queries
+                    * a **speed layer**:
+                        * the incoming stream is processed
+                        * the result is streamed to a realtime view, available for queries
+                    </script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%" data-transition="none-in none-out">
+					<script type="text/template">
+						## 2.1. Big data architecture patterns
+						### The Lambda architecture
+
+						[“Big Data” by Nathan Marz, James Warren](https://www.manning.com/books/big-data)
+
+						<img class="plain" data-src="img/archi/lambda_1.svg" alt="Lambda architecture">
+						* **incoming data stream**
+						* **batch layer**: buffer stream to form a batch, process batch, send result to the view
+						* **speed layer**: process incoming data stream and stream the result to a real time view
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%" data-transition="none-in none-out">
+					<script type="text/template">
+						## 2.1. Big data architecture patterns
+						### The Lambda architecture
+
+						[“Big Data” by Nathan Marz, James Warren](https://www.manning.com/books/big-data)
+
+						<img class="plain" data-src="img/archi/lambda_2.svg" alt="Lambda architecture">
+						* **incoming data stream**
+						* **batch layer**: buffer stream to form a batch, process batch, send result to the view
+						* **speed layer**: process incoming data stream and stream the result to a real time view
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%" data-transition="none-in fade-out">
+					<script type="text/template">
+						## 2.1. Big data architecture patterns
+						### The Lambda architecture
+
+						[“Big Data” by Nathan Marz, James Warren](https://www.manning.com/books/big-data)
+
+						<img class="plain" data-src="img/archi/lambda_3.svg" alt="Lambda architecture">
+						* **incoming data stream**
+						* **batch layer**: buffer stream to form a batch, process batch, send result to the view
+						* **speed layer**: process incoming data stream and stream the result to a real time view
+					</script>
+				</section>
+
+				<section data-markdown data-background-image="img/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"   data-transition="fade-in none-out">
+					<script type="text/template">
+						## 2.1. Big data architecture patterns
+						### The Kappa architecture
+						[“Questioning the Lambda Architecture”, Jay Kreps](https://www.oreilly.com/ideas/questioning-the-lambda-architecture)
+
+						<img class="plain" data-src="img/archi/kappa.svg" alt="Kappa architecture" width=60%>
+
+						Simplification of the Lambda architecture:
+						* no batch layer
+						* **But** The stream is replayable
+
+						Notes:
+						Simplification of the Lambda architecture:
+						* no batch layer
+						* need to abstract the batch / stream process in a single processing code unit
+
+						**But** The stream is replayable
+						* Ability to reprocess data in case of processing code updates
+						* Pushing code updates more straightforward
+
+						**NEED TO BE ABLE TO DO BOTH Lambda AND KAPPA**
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in none-out">
+					<script type="text/template">
+						## 2.1. Big data architecture patterns
+						### The Kappa architecture
+						[“Questioning the Lambda Architecture”, Jay Kreps](https://www.oreilly.com/ideas/questioning-the-lambda-architecture)
+
+						<img class="plain" data-src="img/archi/kappa_1.svg" alt="Kappa architecture" width=60%>
+
+						Simplification of the Lambda architecture:
+						* no batch layer
+						* **But** The stream is replayable
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in none-out">
+					<script type="text/template">
+						## 2.1. Big data architecture patterns
+						### The Kappa architecture
+						[“Questioning the Lambda Architecture”, Jay Kreps](https://www.oreilly.com/ideas/questioning-the-lambda-architecture)
+
+						<img class="plain" data-src="img/archi/kappa_2.svg" alt="Kappa architecture" width=60%>
+
+						Simplification of the Lambda architecture:
+						* no batch layer
+						* **But** The stream is replayable
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in none-out">
+					<script type="text/template">
+						## 2.1. Big data architecture patterns
+						### The Kappa architecture
+						[“Questioning the Lambda Architecture”, Jay Kreps](https://www.oreilly.com/ideas/questioning-the-lambda-architecture)
+
+						<img class="plain" data-src="img/archi/kappa_3.svg" alt="Kappa architecture" width=60%>
+
+						Simplification of the Lambda architecture:
+						* no batch layer
+						* **But** The stream is replayable
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in fade-out">
+					<script type="text/template">
+						## 2.1. Big data architecture patterns
+						### The Kappa architecture
+						[“Questioning the Lambda Architecture”, Jay Kreps](https://www.oreilly.com/ideas/questioning-the-lambda-architecture)
+
+						<img class="plain" data-src="img/archi/kappa_4.svg" alt="Kappa architecture" width=60%>
+
+						Simplification of the Lambda architecture:
+						* no batch layer
+						* **But** The stream is replayable
+					</script>
+				</section>
+
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 	## 2.1. Big data architecture patterns
@@ -156,9 +288,9 @@
 
 	* Connect heterogeneous applications
 	* Support disparate protocols
-	* Provides various messenging patterns: message transform, aggregation, splitting, routing, buffering, ...
+	* Provides various messaging patterns: message transform, aggregation, splitting, routing, buffering, ...
 
-	<img src="img/broker.png" class="plain" alt="Message broker pattern"/>
+	<img src="img/archi/broker.svg" class="plain" alt="Message broker pattern"/>
 
 	&#128279;[More on message queues and brokers](https://messagebrokers.presentations.cetic.be)
 
@@ -166,30 +298,94 @@
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
-						## 2.2. Logical view - simplified
-						<img class="plain" data-src="img/archi/FADI-logical-simplified.png" alt="FADI logical view - simplified" width=50% />
+						## 2.2. Logical view
+						<img class="plain" data-src="img/archi/logical_view.svg" alt="FADI logical view" height="600px" />
+                        &nbsp;
+                        Notes:
+                        * TODO: oneliner for each big box
+                        * TODO: oneliner for "Logical view" definition
+					</script>
+				</section>
+                <section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="fade-in none-out">
+                    <script type="text/template">
+                        ## 2.3. Implementation view - Serving layer
+                        <img class="plain" data-src="img/archi/logical_view_serving.svg" alt="FADI logical view - serving layer" width=100% />
+
+                        Notes:
+                        * TODO: oneliner for "impl views" definition
+                    </script>
+                </section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in fade-out">
+					<script type="text/template">
+						## 2.3. Implementation view - Serving layer
+						<img class="plain" data-src="img/archi/implementation_view_serving.svg" alt="FADI implementation view - serving layer" width=100% />
+
+						* <img class="plain" data-src="img/logos/jupyter.png" alt="Jupyter" height="50px" /> Machine learning notebooks in a web interface...
+						* <img class="plain" data-src="img/logos/jupyter_hub.svg" alt="JupyterHub" height="50px" /> ... multi-users ...
+						* <img class="plain" data-src="img/logos/jupyter_binder.png" alt="Jupyter Binder" height="30px" /> ... on-demand executable environments.
+
+						Jupyter + JupyterHub + BinderHub
+						Grafana
+						Superset
+
+						Notes:
+						* this it is a sample implementation of the LV, some modules can be swapped (e.g. using cloud PaaS offerings for storage - example: AWS S3)
 					</script>
 				</section>
 
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
-		## 2.2. Logical view - full
-		<img class="plain" data-src="img/archi/FADI-logical.png" alt="FADI logical view" width=50% />
+						## 2.3. Implementation view - Serving layer
+						<img class="plain" data-src="img/archi/implementation_view_serving.svg" alt="FADI implementation view - serving layer" width=100% />
+
+						Jupyter + JupyterHub + BinderHub
+						Grafana
+						Superset
+
+						Notes:
+						* TODO: oneliner for "impl views" definition
+						* this it is a sample implementation of the LV, some modules can be swapped (e.g. using cloud PaaS offerings for storage - example: AWS S3)
+					</script>
+				</section>
+
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						## 2.3. Implementation view - Data integration
+						<img class="plain" data-src="img/archi/implementation_view_integration.svg" alt="FADI implementation view - data integration" width=100% />
+
+						NIFI
+						Kong,
+						Notes:
+						* uses Zookeeper
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
-		## 2.3. Implementation view
-		<img class="plain" data-src="img/archi/FADI-implementation.png" alt="FADI implementation view" width=50% />
+						## 2.3. Implementation view - Data analysis
+						<img class="plain" data-src="img/archi/implementation_view_analysis.svg" alt="FADI implementation view - data analysis" width=100% />
 					</script>
 				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						## 2.3. Implementation view
+						<img class="plain" data-src="img/archi/implementation_view_integration.svg" alt="FADI implementation view - data integration" width=100% />
 
-
+					</script>
+				</section>
+                <section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+                    <script type="text/template">
+                        ## 2.3. Implementation view
+                        <img class="plain" data-src="img/archi/implementation_view.svg" alt="FADI implementation view" width=50% />
+                    </script>
+                </section>
 			</section>
 			<section id="usecase">
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 # 3. Sample Use Case
+
+&darr;
+
 					</script>
 				</section>
 			</section>
@@ -198,6 +394,7 @@
 					<script type="text/template">
 # 4. Conclusion
 > The FADI project is dedicated to making the deployment of Big Data tools simple, portable and scalable. The goal is to provide a straightforward way to deploy open-source systems for Big Data to various infrastructures (private and public clouds).
+&darr;
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
@@ -205,7 +402,7 @@
 # 4. Conclusion
 
 More on FADI:
-* **Usage** documentation: https://github.com/cetic/fadi/README.md
+* **Usage** documentation: https://github.com/cetic/fadi/USERGUIDE.md
 * **Installation** instructions: https://github.com/cetic/fadi/INSTALL.md
 * **Support** (questions, problems, feature requests, ...):
 	* https://github.com/cetic/fadi/issues/new
@@ -217,8 +414,14 @@ More on FADI:
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 # 5. References
+
 * [P. Kruchten, Architectural Blueprints - The "4+1" View Model of Software Architecture](https://www.cs.ubc.ca/~gregor/teaching/papers/4+1view-architecture.pdf)
-	* WIP [A presentation on the 4+1 methodology at CETIC (FR)](https://architecture.presentations.cetic.be)
+* Some presentations:
+    * [Message queues and brokers](https://messagebrokers.presentations.cetic.be)
+    * [DevOps](https://devops.presentations.cetic.be)
+    * WIP [Big Data architecture patterns](https://bigdataplatform.presentations.cetic.be)
+    * WIP [The 4+1 methodology at CETIC (FR)](https://architecture.presentations.cetic.be)
+
 					</script>
 				</section>
 			<section>
