@@ -323,3 +323,6 @@ body {
   padding: 3px;
   margin: 5px;
   line-height: 40px; }
+
+.reveal .noborder {
+  border: none; }
