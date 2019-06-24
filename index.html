@@ -319,6 +319,8 @@
 					<script type="text/template">
 						## 2.3. Implementation view - Serving layer
 						<img class="plain" data-src="img/archi/implementation_view_serving.svg" alt="FADI implementation view - serving layer" width=100% />
+						Notes:
+						* this it is a sample implementation of the LV, some modules can be swapped (e.g. using cloud PaaS offerings for storage - example: AWS S3)
 					</script>
 				</section>
 
@@ -328,35 +330,72 @@
 						<table class="noborder">
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/jupyter.png" alt="Jupyter" height="50px" />Machine learning notebooks in a web interface... <br />
-									<img class="plain" style="margin: 0;"  data-src="img/logos/jupyter_hub.svg" alt="JupyterHub" height="50px" />... multi-users ... <br />
-									<img class="plain" style="margin: 0;"  data-src="img/logos/jupyter_binder.png" alt="Jupyter Binder" height="30px" /> ... on-demand executable environments.
+									<table class="noborder">
+										<tr class="noborder">
+											<td class="noborder" style="vertical-align:middle; text-align: center">
+												<img class="plain" style="margin: 0;" data-src="img/logos/jupyter.png" alt="Jupyter" height="70px" />
+											</td>
+											<td class="noborder" style="vertical-align:middle; text-align: center">
+												Machine learning notebooks in a web interface...
+											</td>
+										</tr>
+										<tr class="noborder">
+											<td class="noborder" style="vertical-align:middle; text-align: center">
+												<img class="plain" style="margin: 0;"  data-src="img/logos/jupyter_hub.svg" alt="JupyterHub" height="70px" />
+											</td>
+											<td class="noborder" style="vertical-align:middle; text-align: center">
+												... multi-users ...
+											</td>
+										</tr>
+										<tr class="noborder">
+											<td class="noborder" style="vertical-align:middle; text-align: center">
+												<img class="plain" style="margin: 0;"  data-src="img/logos/jupyter_binder.png" alt="Jupyter Binder" height="40px" />
+											</td>
+											<td class="noborder" style="vertical-align:middle; text-align: center">
+												... on-demand executable environments.
+											</td>
+										</tr>
+									</table>
 								</td>
 								<td class="noborder" width="50%" height="400px" style="background-image: url(img/archi/jupyter_use_case_coffee.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
 							</tr>
 						</table>
 						Notes:
-							* TODO: oneliner for "impl views" definition
-							* this it is a sample implementation of the LV, some modules can be swapped (e.g. using cloud PaaS offerings for storage - example: AWS S3)
+						    * TODO: add links to jupyter etc
 					</script>
 				</section>
 
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Serving layer
-						<img class="plain" data-src="img/archi/implementation_view_serving.svg" alt="FADI implementation view - serving layer" width=100% />
 
-						Grafana
-						Superset
-
+						<table class="noborder">
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<img class="plain" style="margin: 0;" data-src="img/logos/grafana.png" alt="Grafana" height="200px" /><br />
+											Dashboards creation for data visualisation and alerting system.
+								</td>
+								<td class="noborder" width="50%" height="400px" style="background-image: url(img/archi/grafana_sample_dashboard.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
+							</tr>
+						</table>
 						Notes:
+						* Sample dashboard is part of CETIC homemade HVAC monitoring system
+						* TODO: add grafana link
+						* TODO: add superset dashboard
 					</script>
 				</section>
 
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Data integration
-						<img class="plain" data-src="img/archi/implementation_view_integration.svg" alt="FADI implementation view - data integration" width=100% />
+						<img class="plain" data-src="img/archi/implementation_view_integration.svg" alt="FADI implementation view - data integration" width=20% />
+
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						## 2.3. Implementation view - Data integration
+						<img class="plain" data-src="img/archi/implementation_view_integration.svg" alt="FADI implementation view - data integration" width=20% />
 
 						NIFI
 						Kong,
@@ -380,7 +419,7 @@
                 <section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
                     <script type="text/template">
                         ## 2.3. Implementation view
-                        <img class="plain" data-src="img/archi/implementation_view.svg" alt="FADI implementation view" width=50% />
+                        <img class="plain" data-src="img/archi/implementation_view.svg" alt="FADI implementation view" height=100% />
 
                     </script>
                 </section>
