@@ -395,14 +395,47 @@
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Data integration
-						<img class="plain" data-src="img/archi/implementation_view_integration.svg" alt="FADI implementation view - data integration" width=20% />
+						<table class="noborder">
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<img class="plain" style="margin: 0;" data-src="img/logos/nifi.png" alt="Apache Nifi" height="200px" /><br />
+									Process and distribute data with a web interface.
+								</td>
+								<td class="noborder" width="50%" height="400px" style="background-image: url(img/archi/nifi_sample_dashboard.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
+							</tr>
+						</table>
 
-						NIFI
-						Kong,
 						Notes:
 						* uses Zookeeper
+						* TODO: ADD Kong and cie
+						* TODO: Add links
 					</script>
 				</section>
+
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						## 2.3. Implementation view - Data integration
+						<table class="noborder">
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<img class="plain" style="margin: 0;" data-src="img/logos/kafka.png" alt="Apache Kafka" height="200px" /><br />
+								</td>
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<img class="plain" style="margin: 0;" data-src="img/logos/pulsar.png" alt="Apache Pulsar" height="200px" /><br />
+								</td>
+							</tr>
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;" colspan="2">
+									Scalable message brokers, real time stream processing.
+								</td>
+							</tr>
+						</table>
+						Note:
+						* TODO: add links
+					</script>
+				</section>
+
+
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Data analysis
@@ -411,9 +444,8 @@
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
-						## 2.3. Implementation view
-						<img class="plain" data-src="img/archi/implementation_view_integration.svg" alt="FADI implementation view - data integration" width=100% />
-
+						## 2.3. Implementation view - Storage
+						<img class="plain" data-src="img/archi/implementation_view_storage.svg" alt="FADI implementation view - storage" width=100% />
 					</script>
 				</section>
                 <section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
