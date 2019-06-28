@@ -84,7 +84,6 @@
 						* <img src="img/graph.svg" class="plain" height="32x" style="margin-bottom:0px;"/> configurable **user interface** for reporting of data analysis (notebooks, dashboards, ...)
 						* <img src="img/bell.svg" class="plain" height="32px" style="margin-bottom:0px;"/> anomaly detection with **alerting** mechanisms
 						* <img src="img/multitenancy.svg" class="plain" height="32px" style="margin-bottom:0px;"/>**multi-tenancy** to provide data isolation while avoiding cloned IT environments
-						*
 
 					</script>
 				</section>
@@ -316,18 +315,17 @@
 						<img class="plain" data-src="img/archi/logical_view.svg" alt="FADI logical view" height="600px" />
                         &nbsp;
                         Notes:
-                        * TODO: oneliner for each big box
-                        * TODO: oneliner for "Logical view" definition
+                        * Serving layer: contains the user-facing web interfaces (dashboards, notebooks, ...)
+						* Data integration: data transport, integration with other systems and datasources
+						* Storage: file, object and database storage services
+						* Analysis: ML processing engines
 					</script>
 				</section>
                 <section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="fade-in none-out">
                     <script type="text/template">
                         ## 2.3. Implementation view - Serving layer
                         <img class="plain" data-src="img/archi/logical_view_serving.svg" alt="FADI logical view - serving layer" width=100% />
-
-                        Notes:
-                        * TODO: oneliner for "impl views" definition
-                    </script>
+					</script>
                 </section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in fade-out">
 					<script type="text/template">
@@ -347,7 +345,7 @@
 									<table class="noborder">
 										<tr class="noborder">
 											<td class="noborder" style="vertical-align:middle; text-align: center">
-												<img class="plain" style="margin: 0;" data-src="img/logos/jupyter.png" alt="Jupyter" height="70px" />
+												<a href="https://jupyter.org/"> <img class="plain" style="margin: 0;" data-src="img/logos/jupyter.png" alt="Jupyter" height="70px" /></a>
 											</td>
 											<td class="noborder" style="vertical-align:middle; text-align: center">
 												Machine learning notebooks in a web interface...
@@ -355,7 +353,7 @@
 										</tr>
 										<tr class="noborder">
 											<td class="noborder" style="vertical-align:middle; text-align: center">
-												<img class="plain" style="margin: 0;"  data-src="img/logos/jupyter_hub.svg" alt="JupyterHub" height="70px" />
+												<a href="https://github.com/jupyterhub/jupyterhub"><img class="plain" style="margin: 0;"  data-src="img/logos/jupyter_hub.svg" alt="JupyterHub" height="70px" /></a>
 											</td>
 											<td class="noborder" style="vertical-align:middle; text-align: center">
 												... multi-users ...
@@ -363,7 +361,7 @@
 										</tr>
 										<tr class="noborder">
 											<td class="noborder" style="vertical-align:middle; text-align: center">
-												<img class="plain" style="margin: 0;"  data-src="img/logos/jupyter_binder.png" alt="Jupyter Binder" height="40px" />
+												<a href="https://gke.mybinder.org/"><img class="plain" style="margin: 0;"  data-src="img/logos/jupyter_binder.png" alt="Jupyter Binder" height="40px" /></a>
 											</td>
 											<td class="noborder" style="vertical-align:middle; text-align: center">
 												... on-demand executable environments.
@@ -375,7 +373,7 @@
 							</tr>
 						</table>
 						Notes:
-						* TODO: add links to jupyter etc
+						*
 					</script>
 				</section>
 
@@ -386,7 +384,7 @@
 						<table class="noborder" width="100%">
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/grafana.png" alt="Grafana"  /><br />
+									<a href="https://grafana.com/"><img class="plain" style="margin: 0;" data-src="img/logos/grafana.png" alt="Grafana"  /></a><br />
 											Dashboards creation for data visualisation and alerting system.
 								</td>
 								<td class="noborder" width="50%" height="600px" style="background-image: url(img/archi/grafana_sample_dashboard.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
@@ -395,7 +393,7 @@
 						Notes:
 						* Sample dashboard is part of CETIC homemade HVAC monitoring system
 						* pgadmin can be used also for data exploration
-						* TODO: add grafana link
+						* can use various datasources as backend (timeseries, relational, api, ...)
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
@@ -405,7 +403,7 @@
 						<table class="noborder" width="100%">
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/superset.png" alt="Superset"  /><br />
+									<a href="http://superset.incubator.apache.org/"><img class="plain" style="margin: 0;" data-src="img/logos/superset.png" alt="Superset"  /></a><br />
 									BI tool with a web interface - explore, filter and organise data into dashboards.
 								</td>
 								<td class="noborder" width="50%" height="600px" style="background-image: url(img/archi/superset-dashboard.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
@@ -432,17 +430,15 @@
 						<table class="noborder" width="100%">
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/nifi.png" alt="Apache Nifi" height="100px" /><br />
-									Process and distribute data through a web interface.
+									<a href="https://nifi.apache.org/" ><img class="plain" style="margin: 0;" data-src="img/logos/nifi.png" alt="Apache Nifi" height="100px" /></a><br />
+									Apache nifi - Process and distribute data through a web interface.
 								</td>
 								<td class="noborder" width="50%" height="800px" style="background-image: url(img/archi/nifi_sample_dashboard.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
 							</tr>
 						</table>
 
 						Notes:
-						* uses Zookeeper
-						* TODO: ADD Kong and cie
-						* TODO: Add links
+						* uses Zookeeper under the hood
 					</script>
 				</section>
 
@@ -452,21 +448,35 @@
 						<table class="noborder">
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/kafka.png" alt="Apache Kafka" height="200px" /><br />
+									<a href="https://pulsar.apache.org/"><img class="plain" style="margin: 0;" data-src="img/logos/pulsar.png" alt="Apache Pulsar" height="100px" /></a>
 								</td>
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/pulsar.png" alt="Apache Pulsar" height="200px" /><br />
+									Scalable message broker, real time stream processing.
 								</td>
+
 							</tr>
 							<tr class="noborder">
-								<td class="noborder" style="vertical-align:middle; text-align: center;" colspan="2">
-									Scalable message brokers, real time stream processing.
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<a href="https://drill.apache.org/"><img class="plain" style="margin: 0;" data-src="img/logos/drill.png" alt="Apache Drill" height="100px" /></a>
+								</td>
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									Distributed SQL query engine, query semi/unstructured data
+								</td>
+
+							</tr>
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<a href="https://arrow.apache.org/"><img class="plain" style="margin: 0;" data-src="img/logos/arrow.png" alt="Apache Arrow" height="50px" /></a>
+								</td>
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									In-memory data development platform
 								</td>
 							</tr>
 						</table>
 
 						Note:
-						* TODO: add links
+						* Why Pulsar? Could have been Kafka, see message brokers presentation for more info
+						* Sample use case: use Arrow to load data from disk (object storage) and process/query it with Drill
 					</script>
 				</section>
 
@@ -477,7 +487,8 @@
 						<img class="plain" data-src="img/archi/implementation_view_analysis.svg" alt="FADI implementation view - data analysis" width=40% />
 
 						Note:
-						* TODO: mention Tensorflow, Flink, ...
+						* Alternative ML processing engines: Tensorflow, Flink, ...
+						* [Apache Beam](https://beam.apache.org/) provides a way to abstract the ML engine
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
@@ -498,7 +509,6 @@
 						</table>
 
 						Note:
-						* TODO: beam, Flink, Tensorflow + ELK
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
@@ -514,7 +524,7 @@
 						<table class="noborder">
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/postgresql.png" alt="Postgresql" height="200px" /><br />
+									<a href="https://www.postgresql.org/"><img class="plain" style="margin: 0;" data-src="img/logos/postgresql.png" alt="Postgresql" height="200px" /></a>
 								</td>
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
 									Relational database management system <br/>(with timeseries extensions)
@@ -522,7 +532,7 @@
 							</tr>
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/minio.png" alt="Minio" height="200px" /><br />
+									<a href="https://min.io/"><img class="plain" style="margin: 0;" data-src="img/logos/minio.png" alt="Minio" height="200px" /></a>
 								</td>
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
 									Distributed object storage
@@ -530,7 +540,7 @@
 							</tr>
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/parquet.png" alt="Minio" height="100px" /><br />
+									<a href="https://parquet.apache.org/"><img class="plain" style="margin: 0;" data-src="img/logos/parquet.png" alt="Minio" height="100px" /></a>
 								</td>
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
 									Column-oriented data storage format
@@ -538,9 +548,7 @@
 							</tr>
 						</table>
 						Note:
-						* TODO: add links
-						* TODO: Add apache arrow and drill in data integration
-						* TODO: Add Nexus
+						* TODO: models repository - git vs Nexus (see future work on Jupyter binders)
 						* Why PostgreSQL? relational (SQL) + timeseries extensions + clustering (scalability)
 						* Minio: distributed object storage (similar to AWS S3 or Azure Blob Storage, but self-managed)
 						* Parquet: Apache columnar storage format  timeseries data
@@ -555,7 +563,6 @@
 						* This is a sample implementation with the tools in the FADI toolbox
 						    * on AWS it could correspond to the following set of services: Kinesis + EMR + S3 + ... (or SageMaker, or ...)
 						* TODO: keep an eye on https://grafana.com/loki (ELK alternative)
-
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98%  2%" data-background-size="20%">
@@ -572,21 +579,21 @@
 									<img class="plain" data-src="img/archi/implementation_view.svg" alt="FADI implementation view"/>
 								</td>
 								<td class="noborder" style="vertical-align:middle; text-align: center; font-size: 4em"  width="20%">
-									&rarr; <p class="fragment"><img src="img/logos/kubernetes.png" height="100px"></p>
+									&rarr; <p class="fragment"><a href="https://kubernetes.io/"><img src="img/logos/kubernetes.png" height="100px"></a></p>
 								</td>
 								<td class="noborder" style="vertical-align:middle; text-align: center;"  width="35%">
-									<img src="img/logos/aws.png" height="50px"><br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logos/azure.png" height="50px"><br/>
-									<img src="img/logos/openstack.png" height="50px"><br/>
-									<img src="img/logos/gcp.png" height="100px"><br/>
-									<img src="img/logos/proxmox.png" height="100px"><br/>
-									<img src="img/logos/vmware.png" height="50px"><br/>
+									<a href="https://aws.amazon.com/"><img src="img/logos/aws.png" height="50px"></a><br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://azure.microsoft.com/en-us/"><img src="img/logos/azure.png" height="50px"></a><br/>
+									<a href="https://www.openstack.org/"><img src="img/logos/openstack.png" height="50px"></a><br/>
+									<a href="https://cloud.google.com/"><img src="img/logos/gcp.png" height="100px"></a><br/>
+									<a href="https://www.proxmox.com/en/"><img src="img/logos/proxmox.png" height="100px"></a><br/>
+									<a href="https://www.vmware.com/products/vsphere.html"><img src="img/logos/vmware.png" height="50px"></a><br/>
 									...
 								</td>
 							</tr>
 						</table>
 						Note:
-						* TODO: talk about the local dev process of FADI - Virtualbox/KVM and minikube and proxmox and gcp
+						* At CETIC we are deploying FADI on premises using Proxmox/ceph/KVM and in GCP
 
 					</script>
 				</section>
@@ -597,7 +604,7 @@
 						<table class="noborder">
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;" rowspan="2">
-									<img class="plain" style="margin: 0;" data-src="img/logos/kubernetes.png" alt="Kubernetes" height="200px" /><br />
+									<a href="https://kubernetes.io/"><img class="plain" style="margin: 0;" data-src="img/logos/kubernetes.png" alt="Kubernetes" height="200px" /></a><br />
 								</td>
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
 									“Open-source system for automating deployment, scaling, and management of containerized applications.”<br />
@@ -611,7 +618,7 @@
 							</tr>
 						</table>
 						Notes:
-						* Kubernetes (CaaS) vs Virtual Machines (IaaS): portability
+						* Kubernetes (CaaS) vs Virtual Machines (IaaS): mainly for portability reasons
 						* Kubernetes (CaaS) vs OpenShift (PaaS/FaaS): broader hosting offering, both could be combined with e.g. OpenShift running on the Kubernetes cluster
 						* Use of a lightweight (one host node) version of Kubernetes: [Minikube](https://github.com/cetic/fadi/blob/master/INSTALL.md#1-local-installation) for local deployment or to create cheap CI/CD environments. It can run on ex. KVM, VirtualBox hypervisors or just using the Docker engine.
 					</script>
@@ -623,7 +630,7 @@
 						<table class="noborder">
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/helm.png" alt="Helm" height="100px" /><br />
+									<a href="https://helm.sh/"><img class="plain" style="margin: 0;" data-src="img/logos/helm.png" alt="Helm" height="100px" /></a>
 								</td>
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
 									Helm charts provide curated applications definitions ready to be deployed.
@@ -631,7 +638,7 @@
 							</tr>
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/terraform.png" alt="Terraform" height="100px" /><br />
+									<a href="https://www.terraform.io/"><img class="plain" style="margin: 0;" data-src="img/logos/terraform.png" alt="Terraform" height="100px" /></a>
 								</td>
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
 									Describe the infrastructure with code, and orchestrate its deployment.
@@ -639,7 +646,7 @@
 							</tr>
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/gitlab-ci.png" alt="Gitlab-CI" height="100px" /><br />
+									<a href="https://docs.gitlab.com/ee/ci/"><img class="plain" style="margin: 0;" data-src="img/logos/gitlab-ci.png" alt="Gitlab-CI" height="100px" /></a>
 								</td>
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
 									Manage continuous deployment and integration workflow (build, test, deploy, ...) with pipelines.
@@ -650,6 +657,7 @@
 						* A set of Helm charts with their configurations describes the services that should be deployed/updated/removed on the Kubernetes clusters
 						* Terraform is used to automate the deployment of Kubernetes clusters to various infrastructures (GCP, Proxmox, ...)
 						* use of (private) git repository as backend for platform configuration and release
+						* see https://github.com/cetic/fadi/blob/master/.gitlab-ci.sample.yml for sample gitlab-ci configuration
 					</script>
 				</section>
 
@@ -662,11 +670,31 @@
 # 3. Sample Use Case
 
 &darr;
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						# 3. Sample Use Case
+						## Building monitoring at CETIC offices
 
-To
+						<img class="plain" src="img/usecases/usecase1.svg" alt="Use case 1" />
+
+						Provide insights (dashboards and alerts) based on the building sensors data (temperature, co2, ...)
 
 					</script>
 				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						# 3. Sample Use Case
+						## Building monitoring at CETIC offices
+
+						<img class="plain" src="img/usecases/usecase1.svg" alt="Use case 1" />
+
+						Head to https://github.com/cetic/fadi/blob/master/USERGUIDE.md for a tutorial on how to use the FADI framework on this simple use case
+
+					</script>
+				</section>
+
 			</section>
 			<section id="conclusion">
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
@@ -703,7 +731,6 @@ More on FADI:
 
 					</script>
 				</section>
-			<section>
 			<section id="team">
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
@@ -723,265 +750,7 @@ More on FADI:
 
 					</script>
 				</section>
-			<section>
-					<section>
-						</section>
-					</section>
 
-				<section>
-					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-						<script type="text/template">
-							#### From the premise to the cloud
-							<div style="display:table">
-								<div style="display:table-cell">
-									<img class="plain" data-src="img/archi/GrindingsViews-components-premise.png" width=150%>
-								</div>
-							<div style="display:table-cell; font-size:80%; vertical-align:middle">
-								<ul>
-									<li> Streaming layer</li>
-										<ul>
-											<li>Datae are collected on-site</li>
-												<ul>
-													<li>Sensors: data producers</li>
-													<li>Machines: monitored units</li>
-												</ul>
-										</ul>
-									<li>Static layer</li>
-									<ul>
-										<li> On-site stores, e.g.
-											<ul>
-												<li>Machine/Sensors informations</li>
-												<li>Product Metadatae</li>
-											</ul>
-									</ul>
-								</ul>
-							</div>
-						</div>
-						</script>
-					</section>
-
-					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-						<script type="text/template">
-							#### From the premise to the cloud
-							<div style="display:table">
-								<div style="display:table-cell">
-									<img class="plain" data-src="img/archi/GrindingsViews-components-ingestion.png" width=150%>
-								</div>
-							<div style="display:table-cell; font-size:80%; vertical-align:middle">
-								<ul>
-									<li>API gateway (e.g. Kong)</li>
-										<ul>
-											<li>Entry point for the static layer</li>
-											<li>Bi-directional gateway for pulling/pushing static information </li>
-										</ul>
-									<li>Cloud gateway</li>
-									<ul>
-										<li>Entry point for the streaming layer (e.g. Azure IoT hub, AWS IoT, Kura, mqtt)
-											<ul>
-												<li>e.g. Message broker, online IOT endpoints... </li>
-											</ul>
-									</ul>
-									<li>Device management</li>
-									<ul>
-										<li>Edit properties of the devices</li>
-									</ul>
-									<li>Data flow management (based on the Entreprise Integration Patterns: e.g. Nifi, Camel)</li>
-										<ul>
-											<li>Connects to the gateways</li>
-											<li>Unifies static and streamed layers output</li>
-											<li>drives data following the treatment (routing)</li>
-										</ul>
-								</ul>
-							</div>
-						</div>
-						</script>
-					</section>
-				</section>
-
-				<section>
-					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-						<script type="text/template">
-							#### In the cloud: Journey of a measurement
-							###### Analysis layer
-							<div>
-								<div height = "30%">
-									<img class="plain" data-src="img/archi/GrindingsViews-components-analysis.png" alt="Processing" width="40%">
-								</div>
-								<div style="font-size:80%">
-									<ul>
-										<li> Ingested datae are backed up in a <b>Data Lake</b> (e.g. fs, mongoDB, openTSDB, PaaS)</li>
-										<ul>
-										 	<li>Allows for replays or experimentation (see next)</li>
-											<li>Batch processes will load data from the data lake</li>
-										</ul>
-									 	<li>Broker (e.g. Kafka, Pulsar): Entry point, distributed, resilient (see next presentation)</li>
-									 	<li>Extract - Transform - Load (ETL) layer (e.g. scripts, Beam, Flink, Spark): preprocessing of the raw datae</li>
-										<ul>
-										- processed data are sent back to the broker in a different topic (can be another broker)
-										</ul>
-									 	<li>The cleaned stream is processed in the <b>Stream Processor</b> layer (e.g. Spark, Flink, Beam)</li>
-									</ul>
-								</div>
-							</div>
-						</script>
-					</section>
-					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-						<script type="text/template">
-							###### Storage and views layer
-							<div>
-								<div height = "30%">
-									<img class="plain" data-src="img/archi/GrindingsViews-LogicalView_Storage_View.png" alt="Processing" width="50%">
-								</div>
-								<div style="font-size:70%">
-									<ul>
-										<li> Processed data are stored on the <b>Datawarehouse</b> (DWH) (e.g. PgSQL, Open TSDB, Cassandra)</li>
-										<li> The DWH is exposed to
-										<ul>
-											<li> a <b>Business Intelligence</b> (BI) tool (e.g. Tableau, Superset) for visualisation and analysis
-											<li> a monitoring tool for continuous check of the data stream (e.g. Grafana)</li>
-											<li> a data exploration / model building layer (e.g. Jupyter, Zeppelin)</li>
-										</ul>
-
-										<li>The DWH contains the properly formatted and, filtered and processed datae</li>
-										<li>The data lake contains raw datae, accessible to the data exploration layer</li>
-									</ul>
-								</div>
-							</div>
-							</script>
-					</section>
-					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-						<script type="text/template">
-							###### Data exploration and model building
-							<div>
-								<div height = "30%">
-									<img class="plain" data-src="img/archi/GrindingsViews-LogicalView_Storage_View.png" alt="Processing" width="50%">
-								</div>
-								<div style="font-size:70%">
-									<ul>
-										<li> After data exploration, the analysis models can be updated
-										<li> Sent to the <b>model repository</b> (e.g. Nexus)
-										<li> ETL, Stream and batch processing layers are fed by the model repo
-									</ul>
-								</div>
-							</script>
-					</section>
-				</section>
-
-				<section>
-					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-						<script type="text/template">
-							#### Data visualisation: BI
-
-							<table align="center" style="margin-left: auto; margin-right: auto;">
-								<tr>
-									<td style="vertical-align:middle" width="40%">
-										<a href="https://superset.incubator.apache.org/"><img class="plain" data-src="img/superset/bank_dash.png" alt="BI Viz"></a>
-									</td>
-									<td style="vertical-align:middle; text-align:center">
-										<ul>
-										 <li> Exploration of the DWH</li>
-										 <li> Report generation</li>
-										 <li> Data aggregations</li>
-										 <li> Multiple sources</li>
-										 <li> Example tools:</li>
-										 <ul>
-											 <li>Apache Superset</li>
-											 <li>Tableau</li>
-											 <li>JasperSoft </li>
-										 </ul>
-										</ul>
-									</td>
-								</tr>
-						</table>
-						</script>
-					</section>
-					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-						<script type="text/template">
-							#### Data visualisation: Monitoring
-<table>
-	<tr>
-		<td width="70%" style="vertical-align:middle; border:0px">
-			<a href="https://grafana.com/dashboards/1701"><img class="plain" data-src="img/grafana/grafana.png" alt="Monitoring Viz"></a>
-		</td>
-		<td  style="vertical-align:middle; border:0px">
-			<ul>
-			 	<li> Live status</li>
-			 	<li> Health check</li>
-			 	<li> Display alarms</li>
-			 	<li> Example: Grafana</li>
-			</ul>
-		</td>
-	</tr>
-</table>
-						</script>
-					</section>
-
-					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-						<script type="text/template">
-							#### Data visualisation: Data Exploration
-							<table>
-								<tr>
-									<td style="vertical-align:middle" width="60%">
-										<img class="plain" data-src="img/jupyter/jupyter-view.png" alt="Exploration Viz">
-									</td>
-									<td style="vertical-align:middle">
-										<ul>
-											<li> Load data</li>
-											<li> Test & build models</li>
-											<li> Prepare views in DWH</li>
-											<li> Example: Jupyter, Apache Zeppelin</li>
-										</ul>
-									</td>
-								</tr>
-								</table>
-						</script>
-					</section>
-
-				</section>
-
-				<section>
-					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-						<script type="text/template">
-							#### Example implementation
-<img class="plain" data-src="img/archi/GrindingsViews-Implementation View.png" alt="Monitoring Viz" width="62%"></a>
-						</script>
-					</section>
-				</section>
-
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-					<script type="text/template">
-#### Our architecture is
-
-* A generic architecture:
-	- skip batch layer + Kafka with resiliance: Kappa architecture
-	- Keeping all components: Lambda architectures
-* toolkit
-  - Provide default settings including many tools
-* Modular
-	- Each components can be replaced in your own deployment
-* Service
-  - Implements a platform as a service (PaaS)
-  - Will be available directly in our cloud
-  - Can be deployed anywhere
-			</script>
-		</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-					<script type="text/template">
-						#### Our architecture is portable
-
-						- Doesn't rely on proprietary technologies
-						- Adaptable to any cloud provider
-						- Cloud agnostic
-						- Avoid vendors locking
-						- Broadly supported software
-					</script>
-				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-					<script type="text/template">
-						## Special thanks/ team?
-
-					</script>
-				</section>
 			</div>
 		</div>
 
