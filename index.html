@@ -3,8 +3,11 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<meta name="description" content="Free Web tutorials">
+		<meta name="keywords" content="Bigdata,analytics,kubernetes,kappa,lambda,spark,cetic">
+		<meta name="author" content="CETIC asbl">
 
-		<title>CETIC - FADI</title>
+		<title>CETIC - FADI - A framework for big data analytics</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/cetic.css">
@@ -27,84 +30,89 @@
 			<div class="slides">
 				<section data-markdown class="homepage" data-background-image="img/theme/cetic/background-homepage.png" data-background-size="contain">
 					<script type="text/template">
-<img data-src="img/fadi_logo.png" class="plain" alt="FADI logo" style="margin-top: -100px" />
-# A framework for big data analytics
-[https://fadi.cetic.be](https://fadi.cetic.be)
+						<img data-src="img/fadi_logo.png" class="plain" alt="FADI logo" style="margin-top: -100px" />
+						# A framework for big data analytics
+						[https://github.com/cetic/fadi](https://github.com/cetic/fadi)
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
-# Table of contents
+						# Table of contents
 
-1. [Context](#/context)
-2. [Architecture](#/architecture)
-3. [Sample use case](#/usecase)
-4. [Conclusion](#/conclusion)
-5. [References](#/references)
+						1. [Context](#/context)
+						2. [Architecture](#/architecture)
+						3. [Sample use case](#/usecase)
+						4. [Conclusion](#/conclusion)
+						5. [References](#/references)
 					</script>
 				</section>
 				<section id="context" >
 					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 						<script type="text/template">
-# 1. Context
+							# 1. Context
 
-* 1.1. Big data challenges
-* 1.2. Specifications - platform features
-* 1.3. Specifications - platform actors
-* 1.4. Specifications - non functional
+							* 1.1. Big data challenges
+							* 1.2. Specifications - platform features
+							* 1.3. Specifications - platform actors
+							* 1.4. Specifications - non functional
 
-&darr;
+							&darr;
 						</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
-	## 1.1. Big Data Challenges
+						## 1.1. Big Data Challenges
 
-	The `V's` of big data:
+						The `V's` of big data:
 
-	* **Volume**
-	* **Velocity**
-	* **Variety**
-	* Value, Veracity, Volativity, Vade retro, ...
+						* **Volume**
+						* **Velocity**
+						* **Variety**
+						* Value, Veracity, Volatility, ...
 
-	**Leads to specialised big data architectures**
+						**Leads to specialised big data architectures**
 
-	Note:
-	* TODO: map a generic, interesting / memorable / pertinent use case to those features
+						Note:
+						A sample use case: factories are equipped with a wide variety of sensors (temperature, vibration, ...) that can produce a lot of data (ex video feed) that needs to be ingested (and sometimes processed) in real time.
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
-	## 1.2. Specifications - Platform features
+						## 1.2. Specifications - Platform features
 
-	* <img src="img/bucket.svg" class="plain" height="32px" style="margin-bottom:0px;"/> **batch** and <img src="img/tap.svg" class="plain" height="24px" style="margin-bottom:0px;"/> **streaming** analysis
-	* <img src="img/graph.svg" class="plain" height="32x" style="margin-bottom:0px;"/> configurable **user interface** for reporting of data analysis (notebooks, dashboards, ...)
-	* <img src="img/bell.svg" class="plain" height="32px" style="margin-bottom:0px;"/> anomaly detection with **alerting** mechanisms
-	* <img src="img/multitenancy.svg" class="plain" height="32px" style="margin-bottom:0px;"/>**multi-tenancy** to provide data isolation while avoiding cloned IT environments
+						* <img src="img/bucket.svg" class="plain" height="32px" style="margin-bottom:0px;"/> **batch** and <img src="img/tap.svg" class="plain" height="24px" style="margin-bottom:0px;"/> **streaming** analysis
+						* <img src="img/graph.svg" class="plain" height="32x" style="margin-bottom:0px;"/> configurable **user interface** for reporting of data analysis (notebooks, dashboards, ...)
+						* <img src="img/bell.svg" class="plain" height="32px" style="margin-bottom:0px;"/> anomaly detection with **alerting** mechanisms
+						* <img src="img/multitenancy.svg" class="plain" height="32px" style="margin-bottom:0px;"/>**multi-tenancy** to provide data isolation while avoiding cloned IT environments
+						*
 
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
-	## 1.3. Specifications - Platform actors
+						## 1.3. Specifications - Platform actors
 
-	* business analysts
-	* data scientists
-	* factory operators
-	* tenant administrators
-	* system administrators
-	* ...
+						* business analysts
+						* data scientists
+						* factory operators
+						* tenant administrators
+						* system administrators
+						* ...
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
-	## 1.4. Specifications - Non functional
+						## 1.4. Specifications - Non functional
 
-	* **availability**: scalability, resilience, monitoring, load testing
-	* **portability**: deployment on premises, in a public cloud, hybrid, …
-	* **installability**: automated continuous deployment and integration
-	* modular, extensible (API’s), responsive web interfaces, open source, operation costs, ...
-	* ...
+						* **availability**: scalability, resilience, monitoring, load testing
+						* **portability**: deployment on premises, in a public cloud, hybrid, ...
+						* **installability**: automated installation, continuous deployment and integration
+						* modular, extensible (API’s), responsive web interfaces, open source, minimal operation costs, ...
+						* ...
+
+						Notes:
+						* **portability**: avoid **vendor lock-in**
+						* modular: system components can be swapped (ex. change one message broker engine by another: Kafka<->Pulsar), added or removed with relative ease (configuration)
 					</script>
 				</section>
 
@@ -112,37 +120,43 @@
 			<section id=architecture">
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
-	# 2. Architecture
-	* 2.1. Big data architecture patterns
-	* 2.2. Logical view
-	* 2.3. Implementation view
-	* 2.4. Deployment views
+						# 2. Architecture
+						* 2.1. Big data architecture patterns
+						* 2.2. Logical view
+						* 2.3. Implementation view
+						* 2.4. Deployment views
 
-	&darr;
+						&darr;
 
+						Notes:
+						* First some (light) theory with some big data patterns, such as Kappa, Lambda architectures or message queuing
+						* Then various views of the proposed architecture:
+							* Logical view provides a high-level description of the logical components of the architecture independently from any implementation
+							* Implementation view proposes a set of tools needed to satisfy the requirements (streaming analysis, scalability, ...)
+							* Deployment view presents the software components topology and the tools/methods needed for deployment and development
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="fade-in none-out">
 					<script type="text/template">
-                    ## 2.1. Big data architecture patterns
-                    ### The Lambda architecture
+						## 2.1. Big data architecture patterns
+						### The Lambda architecture
 
-                    [“Big Data” by Nathan Marz, James Warren](https://www.manning.com/books/big-data)
+						[“Big Data” by Nathan Marz, James Warren](https://www.manning.com/books/big-data)
 
-                    <img class="plain" data-src="img/archi/lambda.svg" alt="Lambda architecture">
-                    * **incoming data stream**
-                    * **batch layer**: buffer stream to form a batch, process batch, send result to the view
-                    * **speed layer**: process incoming data stream and stream the result to a real time view
+						<img class="plain" data-src="img/archi/lambda.svg" alt="Lambda architecture">
+						* **incoming data stream**
+						* **batch layer**: buffer stream to form a batch, process batch, send result to the view
+						* **speed layer**: process incoming data stream and stream the result to a real time view
 
-                    Notes:
-                    * an **incoming data stream**
-                    * a **batch layer**:
-                        * buffers the stream to form a batch
-                        * the batch is processed
-                        * the result is sent to the view, available for queries
-                    * a **speed layer**:
-                        * the incoming stream is processed
-                        * the result is streamed to a realtime view, available for queries
+						Notes:
+						* an **incoming data stream**
+						* a **batch layer**:
+							* buffers the stream to form a batch
+							* the batch is processed
+							* the result is sent to the view, available for queries
+						* a **speed layer**:
+							* the incoming stream is processed
+							* the result is streamed to a realtime view, available for queries
                     </script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%" data-transition="none-in none-out">
@@ -206,7 +220,7 @@
 						* Ability to reprocess data in case of processing code updates
 						* Pushing code updates more straightforward
 
-						**NEED TO BE ABLE TO DO BOTH Lambda AND KAPPA**
+						**NEED TO BE ABLE TO DO BOTH LAMBDA AND KAPPA**
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in none-out">
@@ -361,7 +375,7 @@
 							</tr>
 						</table>
 						Notes:
-						    * TODO: add links to jupyter etc
+						* TODO: add links to jupyter etc
 					</script>
 				</section>
 
@@ -369,19 +383,38 @@
 					<script type="text/template">
 						## 2.3. Implementation view - Serving layer
 
-						<table class="noborder">
+						<table class="noborder" width="100%">
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/grafana.png" alt="Grafana" height="200px" /><br />
+									<img class="plain" style="margin: 0;" data-src="img/logos/grafana.png" alt="Grafana"  /><br />
 											Dashboards creation for data visualisation and alerting system.
 								</td>
-								<td class="noborder" width="50%" height="400px" style="background-image: url(img/archi/grafana_sample_dashboard.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
+								<td class="noborder" width="50%" height="600px" style="background-image: url(img/archi/grafana_sample_dashboard.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
 							</tr>
 						</table>
 						Notes:
 						* Sample dashboard is part of CETIC homemade HVAC monitoring system
+						* pgadmin can be used also for data exploration
 						* TODO: add grafana link
-						* TODO: add superset dashboard
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						## 2.3. Implementation view - Serving layer
+
+						<table class="noborder" width="100%">
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<img class="plain" style="margin: 0;" data-src="img/logos/superset.png" alt="Superset"  /><br />
+									BI tool with a web interface - explore, filter and organise data into dashboards.
+								</td>
+								<td class="noborder" width="50%" height="600px" style="background-image: url(img/archi/superset-dashboard.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
+							</tr>
+						</table>
+						Notes:
+						* Use: data exploration and dashboards
+						* possible to use SQL querying language
+						* characterisation: half way between a ML notebook and a dashboard tool, not suitable for real-time visualisation
 					</script>
 				</section>
 
@@ -389,19 +422,20 @@
 					<script type="text/template">
 						## 2.3. Implementation view - Data integration
 						<img class="plain" data-src="img/archi/implementation_view_integration.svg" alt="FADI implementation view - data integration" width=20% />
+						Notes:
 
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Data integration
-						<table class="noborder">
+						<table class="noborder" width="100%">
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
-									<img class="plain" style="margin: 0;" data-src="img/logos/nifi.png" alt="Apache Nifi" height="200px" /><br />
-									Process and distribute data with a web interface.
+									<img class="plain" style="margin: 0;" data-src="img/logos/nifi.png" alt="Apache Nifi" height="100px" /><br />
+									Process and distribute data through a web interface.
 								</td>
-								<td class="noborder" width="50%" height="400px" style="background-image: url(img/archi/nifi_sample_dashboard.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
+								<td class="noborder" width="50%" height="800px" style="background-image: url(img/archi/nifi_sample_dashboard.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
 							</tr>
 						</table>
 
@@ -430,6 +464,7 @@
 								</td>
 							</tr>
 						</table>
+
 						Note:
 						* TODO: add links
 					</script>
@@ -439,29 +474,196 @@
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Data analysis
-						<img class="plain" data-src="img/archi/implementation_view_analysis.svg" alt="FADI implementation view - data analysis" width=100% />
+						<img class="plain" data-src="img/archi/implementation_view_analysis.svg" alt="FADI implementation view - data analysis" width=40% />
+
+						Note:
+						* TODO: mention Tensorflow, Flink, ...
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						## 2.3. Implementation view - Data analysis
+						<table class="noborder">
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<img class="plain" style="margin: 0;" data-src="img/logos/spark.png" alt="Apache Spark" height="200px" /><br />
+								</td>
+							</tr>
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									Analytics engine for large-scale data processing <br />
+									(batch and stream)
+								</td>
+							</tr>
+						</table>
+
+						Note:
+						* TODO: beam, Flink, Tensorflow + ELK
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Storage
-						<img class="plain" data-src="img/archi/implementation_view_storage.svg" alt="FADI implementation view - storage" width=100% />
+						<img class="plain" data-src="img/archi/implementation_view_storage.svg" alt="FADI implementation view - storage" width=20% />
 					</script>
 				</section>
-                <section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-                    <script type="text/template">
-                        ## 2.3. Implementation view
-                        <img class="plain" data-src="img/archi/implementation_view.svg" alt="FADI implementation view" height=100% />
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						## 2.3. Implementation view - Storage
 
-                    </script>
-                </section>
+						<table class="noborder">
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<img class="plain" style="margin: 0;" data-src="img/logos/postgresql.png" alt="Postgresql" height="200px" /><br />
+								</td>
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									Relational database management system <br/>(with timeseries extensions)
+								</td>
+							</tr>
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<img class="plain" style="margin: 0;" data-src="img/logos/minio.png" alt="Minio" height="200px" /><br />
+								</td>
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									Distributed object storage
+								</td>
+							</tr>
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<img class="plain" style="margin: 0;" data-src="img/logos/parquet.png" alt="Minio" height="100px" /><br />
+								</td>
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									Column-oriented data storage format
+								</td>
+							</tr>
+						</table>
+						Note:
+						* TODO: add links
+						* TODO: Add apache arrow and drill in data integration
+						* TODO: Add Nexus
+						* Why PostgreSQL? relational (SQL) + timeseries extensions + clustering (scalability)
+						* Minio: distributed object storage (similar to AWS S3 or Azure Blob Storage, but self-managed)
+						* Parquet: Apache columnar storage format  timeseries data
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						## 2.3. Implementation view - Summary
+						<img class="plain" data-src="img/archi/implementation_view.svg" alt="FADI implementation view" width=50% />
+						Notes:
+						* We added here the internal services (log management, monitoring, backup, ...)
+						* This is a sample implementation with the tools in the FADI toolbox
+						    * on AWS it could correspond to the following set of services: Kinesis + EMR + S3 + ... (or SageMaker, or ...)
+						* TODO: keep an eye on https://grafana.com/loki (ELK alternative)
+
+					</script>
+				</section>
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98%  2%" data-background-size="20%">
+					<script type="text/template">
+						## 2.4. Deployment view - Targets
+						<table class="noborder" width="100%">
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;" colspan="3">
+									Ensure portability and scalability on **public clouds** or **on premises** infrastructures.
+								</td>
+							</tr>
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: right;" width="45%">
+									<img class="plain" data-src="img/archi/implementation_view.svg" alt="FADI implementation view"/>
+								</td>
+								<td class="noborder" style="vertical-align:middle; text-align: center; font-size: 4em"  width="20%">
+									&rarr; <p class="fragment"><img src="img/logos/kubernetes.png" height="100px"></p>
+								</td>
+								<td class="noborder" style="vertical-align:middle; text-align: center;"  width="35%">
+									<img src="img/logos/aws.png" height="50px"><br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<img src="img/logos/azure.png" height="50px"><br/>
+									<img src="img/logos/openstack.png" height="50px"><br/>
+									<img src="img/logos/gcp.png" height="100px"><br/>
+									<img src="img/logos/proxmox.png" height="100px"><br/>
+									<img src="img/logos/vmware.png" height="50px"><br/>
+									...
+								</td>
+							</tr>
+						</table>
+						Note:
+						* TODO: talk about the local dev process of FADI - Virtualbox/KVM and minikube and proxmox and gcp
+
+					</script>
+				</section>
+
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						## 2.4. Deployment view - Containers as a Service (CaaS)
+						<table class="noborder">
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;" rowspan="2">
+									<img class="plain" style="margin: 0;" data-src="img/logos/kubernetes.png" alt="Kubernetes" height="200px" /><br />
+								</td>
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									“Open-source system for automating deployment, scaling, and management of containerized applications.”<br />
+									https://kubernetes.io/
+								</td>
+							</tr>
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;" colspan="2">
+									<img class="plain" style="margin: 0;" data-src="img/archi/kubernetes-dashboard.png" alt="Kubernetes" height="400px" />
+								</td>
+							</tr>
+						</table>
+						Notes:
+						* Kubernetes (CaaS) vs Virtual Machines (IaaS): portability
+						* Kubernetes (CaaS) vs OpenShift (PaaS/FaaS): broader hosting offering, both could be combined with e.g. OpenShift running on the Kubernetes cluster
+						* Use of a lightweight (one host node) version of Kubernetes: [Minikube](https://github.com/cetic/fadi/blob/master/INSTALL.md#1-local-installation) for local deployment or to create cheap CI/CD environments. It can run on ex. KVM, VirtualBox hypervisors or just using the Docker engine.
+					</script>
+				</section>
+
+				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<script type="text/template">
+						## 2.4. Deployment view - Continuous integration and deployment
+						<table class="noborder">
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<img class="plain" style="margin: 0;" data-src="img/logos/helm.png" alt="Helm" height="100px" /><br />
+								</td>
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									Helm charts provide curated applications definitions ready to be deployed.
+								</td>
+							</tr>
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<img class="plain" style="margin: 0;" data-src="img/logos/terraform.png" alt="Terraform" height="100px" /><br />
+								</td>
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									Describe the infrastructure with code, and orchestrate its deployment.
+								</td>
+							</tr>
+							<tr class="noborder">
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									<img class="plain" style="margin: 0;" data-src="img/logos/gitlab-ci.png" alt="Gitlab-CI" height="100px" /><br />
+								</td>
+								<td class="noborder" style="vertical-align:middle; text-align: center;">
+									Manage continuous deployment and integration workflow (build, test, deploy, ...) with pipelines.
+								</td>
+							</tr>
+						</table>
+						Notes:
+						* A set of Helm charts with their configurations describes the services that should be deployed/updated/removed on the Kubernetes clusters
+						* Terraform is used to automate the deployment of Kubernetes clusters to various infrastructures (GCP, Proxmox, ...)
+						* use of (private) git repository as backend for platform configuration and release
+					</script>
+				</section>
+
 			</section>
+
+
 			<section id="usecase">
 				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 # 3. Sample Use Case
 
 &darr;
+
+To
 
 					</script>
 				</section>
@@ -609,10 +811,10 @@ More on FADI:
 									<ul>
 										<li> Ingested datae are backed up in a <b>Data Lake</b> (e.g. fs, mongoDB, openTSDB, PaaS)</li>
 										<ul>
-										 	<li>Allows for replays or experimentations (see next)</li>
+										 	<li>Allows for replays or experimentation (see next)</li>
 											<li>Batch processes will load data from the data lake</li>
 										</ul>
-									 	<li>Broker (e.g. Kafka, Pulsar): Entry point, distributed, resiliant (see next presentation)</li>
+									 	<li>Broker (e.g. Kafka, Pulsar): Entry point, distributed, resilient (see next presentation)</li>
 									 	<li>Extract - Transform - Load (ETL) layer (e.g. scripts, Beam, Flink, Spark): preprocessing of the raw datae</li>
 										<ul>
 										- processed data are sent back to the broker in a different topic (can be another broker)
@@ -644,6 +846,7 @@ More on FADI:
 										<li>The data lake contains raw datae, accessible to the data exploration layer</li>
 									</ul>
 								</div>
+							</div>
 							</script>
 					</section>
 					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
