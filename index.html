@@ -30,12 +30,12 @@
 			<div class="slides">
 				<section data-markdown class="homepage" data-background-image="img/theme/cetic/background-homepage.png" data-background-size="contain">
 					<script type="text/template">
-						<img data-src="img/fadi_logo.png" class="plain" alt="FADI logo" style="margin-top: -100px" />
+						<img data-src="img/logos/fadi_logo.png" class="plain" alt="FADI logo" style="margin-top: -100px" />
 						# A framework for big data analytics
 						[https://github.com/cetic/fadi](https://github.com/cetic/fadi)
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						# Table of contents
 
@@ -47,19 +47,19 @@
 					</script>
 				</section>
 				<section id="context" >
-					<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+					<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 						<script type="text/template">
 							# 1. Context
 
 							* 1.1. Big data challenges
 							* 1.2. Specifications - platform features
 							* 1.3. Specifications - platform actors
-							* 1.4. Specifications - non functional
+							* 1.4. Specifications - non functional requirements
 
 							&darr;
 						</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 1.1. Big Data Challenges
 
@@ -76,18 +76,18 @@
 						A sample use case: factories are equipped with a wide variety of sensors (temperature, vibration, ...) that can produce a lot of data (ex video feed) that needs to be ingested (and sometimes processed) in real time.
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 1.2. Specifications - Platform features
 
-						* <img src="img/bucket.svg" class="plain" height="32px" style="margin-bottom:0px;"/> **batch** and <img src="img/tap.svg" class="plain" height="24px" style="margin-bottom:0px;"/> **streaming** analysis
-						* <img src="img/graph.svg" class="plain" height="32x" style="margin-bottom:0px;"/> configurable **user interface** for reporting of data analysis (notebooks, dashboards, ...)
-						* <img src="img/bell.svg" class="plain" height="32px" style="margin-bottom:0px;"/> anomaly detection with **alerting** mechanisms
-						* <img src="img/multitenancy.svg" class="plain" height="32px" style="margin-bottom:0px;"/>**multi-tenancy** to provide data isolation while avoiding cloned IT environments
+						* <img src="img/icons/bucket.svg" class="plain" height="32px" style="margin-bottom:0px;"/> **batch** and <img src="img/icons/tap.svg" class="plain" height="24px" style="margin-bottom:0px;"/> **streaming** analysis
+						* <img src="img/icons/graph.svg" class="plain" height="32x" style="margin-bottom:0px;"/> configurable **user interface** for reporting of data analysis (notebooks, dashboards, ...)
+						* <img src="img/icons/bell.svg" class="plain" height="32px" style="margin-bottom:0px;"/> anomaly detection with **alerting** mechanisms
+						* <img src="img/icons/multitenancy.svg" class="plain" height="32px" style="margin-bottom:0px;"/>**multi-tenancy** to provide data isolation while avoiding cloned IT environments
 
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 1.3. Specifications - Platform actors
 
@@ -99,9 +99,9 @@
 						* ...
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
-						## 1.4. Specifications - Non functional
+						## 1.4. Specifications - Non functional requirements
 
 						* **availability**: scalability, resilience, monitoring, load testing
 						* **portability**: deployment on premises, in a public cloud, hybrid, ...
@@ -117,7 +117,7 @@
 
 			</section>
 			<section id=architecture">
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						# 2. Architecture
 						* 2.1. Big data architecture patterns
@@ -135,7 +135,7 @@
 							* Deployment view presents the software components topology and the tools/methods needed for deployment and development
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="fade-in none-out">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="fade-in none-out">
 					<script type="text/template">
 						## 2.1. Big data architecture patterns
 						### The Lambda architecture
@@ -158,7 +158,7 @@
 							* the result is streamed to a realtime view, available for queries
                     </script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%" data-transition="none-in none-out">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%" data-transition="none-in none-out">
 					<script type="text/template">
 						## 2.1. Big data architecture patterns
 						### The Lambda architecture
@@ -171,7 +171,7 @@
 						* **speed layer**: process incoming data stream and stream the result to a real time view
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%" data-transition="none-in none-out">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%" data-transition="none-in none-out">
 					<script type="text/template">
 						## 2.1. Big data architecture patterns
 						### The Lambda architecture
@@ -184,7 +184,7 @@
 						* **speed layer**: process incoming data stream and stream the result to a real time view
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%" data-transition="none-in fade-out">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%" data-transition="none-in fade-out">
 					<script type="text/template">
 						## 2.1. Big data architecture patterns
 						### The Lambda architecture
@@ -198,7 +198,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-background-image="img/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"   data-transition="fade-in none-out">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"   data-transition="fade-in none-out">
 					<script type="text/template">
 						## 2.1. Big data architecture patterns
 						### The Kappa architecture
@@ -222,7 +222,7 @@
 						**NEED TO BE ABLE TO DO BOTH LAMBDA AND KAPPA**
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in none-out">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in none-out">
 					<script type="text/template">
 						## 2.1. Big data architecture patterns
 						### The Kappa architecture
@@ -235,7 +235,7 @@
 						* **But** The stream is replayable
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in none-out">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in none-out">
 					<script type="text/template">
 						## 2.1. Big data architecture patterns
 						### The Kappa architecture
@@ -248,7 +248,7 @@
 						* **But** The stream is replayable
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in none-out">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in none-out">
 					<script type="text/template">
 						## 2.1. Big data architecture patterns
 						### The Kappa architecture
@@ -261,7 +261,7 @@
 						* **But** The stream is replayable
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in fade-out">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.svg" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in fade-out">
 					<script type="text/template">
 						## 2.1. Big data architecture patterns
 						### The Kappa architecture
@@ -275,7 +275,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 	## 2.1. Big data architecture patterns
 	### Data lake / data warehouse
@@ -294,7 +294,7 @@
 
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 	## 2.1. Big data architecture patterns
 	### Message queuing
@@ -309,7 +309,7 @@
 
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.2. Logical view
 						<img class="plain" data-src="img/archi/logical_view.svg" alt="FADI logical view" height="600px" />
@@ -321,13 +321,13 @@
 						* Analysis: ML processing engines
 					</script>
 				</section>
-                <section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="fade-in none-out">
+                <section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="fade-in none-out">
                     <script type="text/template">
                         ## 2.3. Implementation view - Serving layer
                         <img class="plain" data-src="img/archi/logical_view_serving.svg" alt="FADI logical view - serving layer" width=100% />
 					</script>
                 </section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in fade-out">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in fade-out">
 					<script type="text/template">
 						## 2.3. Implementation view - Serving layer
 						<img class="plain" data-src="img/archi/implementation_view_serving.svg" alt="FADI implementation view - serving layer" width=100% />
@@ -336,7 +336,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in fade-out">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%"  data-transition="none-in fade-out">
 					<script type="text/template">
 						## 2.3. Implementation view - Serving layer
 						<table class="noborder">
@@ -377,7 +377,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Serving layer
 
@@ -396,7 +396,7 @@
 						* can use various datasources as backend (timeseries, relational, api, ...)
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Serving layer
 
@@ -416,7 +416,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Data integration
 						<img class="plain" data-src="img/archi/implementation_view_integration.svg" alt="FADI implementation view - data integration" width=20% />
@@ -424,7 +424,7 @@
 
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Data integration
 						<table class="noborder" width="100%">
@@ -442,7 +442,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Data integration
 						<table class="noborder">
@@ -481,7 +481,7 @@
 				</section>
 
 
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Data analysis
 						<img class="plain" data-src="img/archi/implementation_view_analysis.svg" alt="FADI implementation view - data analysis" width=40% />
@@ -491,7 +491,7 @@
 						* [Apache Beam](https://beam.apache.org/) provides a way to abstract the ML engine
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Data analysis
 						<table class="noborder">
@@ -511,13 +511,13 @@
 						Note:
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Storage
 						<img class="plain" data-src="img/archi/implementation_view_storage.svg" alt="FADI implementation view - storage" width=20% />
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Storage
 
@@ -554,7 +554,7 @@
 						* Parquet: Apache columnar storage format  timeseries data
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.3. Implementation view - Summary
 						<img class="plain" data-src="img/archi/implementation_view.svg" alt="FADI implementation view" width=50% />
@@ -565,7 +565,7 @@
 						* TODO: keep an eye on https://grafana.com/loki (ELK alternative)
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98%  2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98%  2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.4. Deployment view - Targets
 						<table class="noborder" width="100%">
@@ -579,26 +579,25 @@
 									<img class="plain" data-src="img/archi/implementation_view.svg" alt="FADI implementation view"/>
 								</td>
 								<td class="noborder" style="vertical-align:middle; text-align: center; font-size: 4em"  width="20%">
-									&rarr; <p class="fragment"><a href="https://kubernetes.io/"><img src="img/logos/kubernetes.png" height="100px"></a></p>
+									&rarr; <p class="fragment"><a href="https://kubernetes.io/"><img class="plain" src="img/logos/kubernetes.png" height="100px"></a></p>
 								</td>
 								<td class="noborder" style="vertical-align:middle; text-align: center;"  width="35%">
-									<a href="https://aws.amazon.com/"><img src="img/logos/aws.png" height="50px"></a><br/>
-									&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://azure.microsoft.com/en-us/"><img src="img/logos/azure.png" height="50px"></a><br/>
-									<a href="https://www.openstack.org/"><img src="img/logos/openstack.png" height="50px"></a><br/>
-									<a href="https://cloud.google.com/"><img src="img/logos/gcp.png" height="100px"></a><br/>
-									<a href="https://www.proxmox.com/en/"><img src="img/logos/proxmox.png" height="100px"></a><br/>
-									<a href="https://www.vmware.com/products/vsphere.html"><img src="img/logos/vmware.png" height="50px"></a><br/>
+									<a href="https://aws.amazon.com/"><img class="plain" src="img/logos/aws.png" height="50px"></a><br/>
+									&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://azure.microsoft.com/en-us/"><img class="plain" src="img/logos/azure.png" height="50px"></a><br/>
+									<a href="https://www.openstack.org/"><img class="plain" src="img/logos/openstack.png" height="50px"></a><br/>
+									<a href="https://cloud.google.com/"><img class="plain" src="img/logos/gcp.png" height="100px"></a><br/>
+									<a href="https://www.proxmox.com/en/"><img class="plain" src="img/logos/proxmox.png" height="100px"></a><br/>
+									<a href="https://www.vmware.com/products/vsphere.html"><img class="plain" src="img/logos/vmware.png" height="50px"></a><br/>
 									...
 								</td>
 							</tr>
 						</table>
 						Note:
 						* At CETIC we are deploying FADI on premises using Proxmox/ceph/KVM and in GCP
-
 					</script>
 				</section>
 
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.4. Deployment view - Containers as a Service (CaaS)
 						<table class="noborder">
@@ -624,7 +623,7 @@
 					</script>
 				</section>
 
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						## 2.4. Deployment view - Continuous integration and deployment
 						<table class="noborder">
@@ -665,14 +664,14 @@
 
 
 			<section id="usecase">
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 # 3. Sample Use Case
 
 &darr;
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						# 3. Sample Use Case
 						## Building monitoring at CETIC offices
@@ -683,7 +682,7 @@
 
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						# 3. Sample Use Case
 						## Building monitoring at CETIC offices
@@ -697,14 +696,14 @@
 
 			</section>
 			<section id="conclusion">
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 # 4. Conclusion
 > The FADI project is dedicated to making the deployment of Big Data tools simple, portable and scalable. The goal is to provide a straightforward way to deploy open-source systems for Big Data to various infrastructures (private and public clouds).
 &darr;
 					</script>
 				</section>
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 # 4. Conclusion
 
@@ -718,7 +717,7 @@ More on FADI:
 				</section>
 			</section>
 			<section id="references">
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
+				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 # 5. References
 
@@ -731,28 +730,103 @@ More on FADI:
 
 					</script>
 				</section>
-			<section id="team">
-				<section data-markdown data-background-image="img/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-					<script type="text/template">
-# 6. Team and thanks
-
-* Amen Ayadi
-* Annick Majchrowski
-* Alexandre Nuttinck
-* Fabian Steels
-* Maher Badri
-* Mathieu Goeminne
-* Nikolaos Matskanis
-* Rami sellami
-* Sebastien Dupont
-* Stephane Mouton
-* Terence Delsate
-
-					</script>
+			</section>
+				<!-- This is the last page section -->
+				<section class="lastpage" data-background-image="img/theme/cetic/background-lastpage.png">
+					<table>
+						<tr>
+							<td style="width: 50%; text-align: center;">
+								<a href="https://www.cetic.be" /><img data-src="img/theme/cetic/logo-cetic.png" /></a><br /><br />
+								<small>Aéropole de Charleroi-Gosselies <br />
+									Avenue Jean Mermoz 28 <br />
+									B-6041 Charleroi - Belgique <br /></small>
+								<p><iframe width="640" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" data-src="https://www.openstreetmap.org/export/embed.html?bbox=4.473830759525299%2C50.47422046442369%2C4.477371275424957%2C50.475966719544715&amp;layer=mapnik" style="border: 1px solid black"></iframe></p>
+								<table>
+									<tr>
+										<td rowspan="2"><img data-src="img/theme/cetic/icon-twitter.png" /></td>
+										<td>
+											<a href="twitter.com/@CETIC">
+												twitter.com/@CETIC
+												<img style="margin: 0 5px" data-src="img/theme/cetic/icon-flag-french.png" />
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<a href="https://www.twitter.com/@CETIC_be">
+												twitter.com/@CETIC_be
+												<img style="margin: 0px 5px" data-src="img/theme/cetic/icon-flag-english.png" />
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img data-src="img/theme/cetic/icon-linkedin.png" />
+										</td>
+										<td>
+											<a href="https://www.linkedin.com/company/cetic">
+												linkedin.com/company/cetic
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img data-src="img/theme/cetic/icon-mail.png" />
+										</td>
+										<td>
+											<a href="mailto:info@cetic.be">
+												info@cetic.be
+											</a>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img data-src="img/theme/cetic/icon-phone.png" />
+										</td>
+										<td>
+											+32 71 490 700
+										</td>
+									</tr>
+								</table>
+							</td>
+							<td style="text-align: center">
+								<h1>FADI</h1>
+								<h4><a href="index.html?print-pdf&print=1&showNotes" style="color:#ffffff;">&#128424;Print this presentation</a></h4>
+								<br />
+								<br />
+								<br />
+								<!--table style="width: 100%">
+									<tr>
+										<td style="text-align: center"><h2>Presenter</h2></td>
+									</tr>
+									<tr>
+										<td style="text-align: center"><h3>Function</h3></td>
+									</tr>
+									<tr>
+										<td style="text-align: center">Phone</td>
+									</tr>
+									<tr>
+										<td style="text-align: center">email@cetic.be</td>
+									</tr>
+								</table>
+								<table style="width: 100%">
+									<tr>
+										<td style="text-align: center"><h2>Presenter</h2></td>
+									</tr>
+									<tr>
+										<td style="text-align: center"><h3>Function</h3></td>
+									</tr>
+									<tr>
+										<td style="text-align: center">Phone</td>
+									</tr>
+									<tr>
+										<td style="text-align: center">email@cetic.be</td>
+									</tr>
+								</table-->
+							</td>
+						</tr>
+					</table>
 				</section>
-
-			</div>
-		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
@@ -772,6 +846,7 @@ More on FADI:
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+			if (/\bprint=1\b/.test(window.location.search)) window.print();
 		</script>
 	</body>
 </html>
