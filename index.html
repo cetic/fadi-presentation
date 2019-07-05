@@ -552,7 +552,7 @@
 						* TODO: models repository - git vs Nexus (see future work on Jupyter binders)
 						* Why PostgreSQL? relational (SQL) + timeseries extensions + clustering (scalability)
 						* Minio: distributed object storage (similar to AWS S3 or Azure Blob Storage, but self-managed)
-						* Parquet: Apache columnar storage format  timeseries data
+						* Parquet: Apache columnar storage format  timeseries data (see [M. Goeminne's blog post on Parquet - FR](https://www.cetic.be/Apache-Parquet-pour-le-stockage-de-donnees-volumineuses))
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
@@ -620,6 +620,7 @@
 						Notes:
 						* Kubernetes (CaaS) vs Virtual Machines (IaaS): mainly for portability reasons
 						* Kubernetes (CaaS) vs OpenShift (PaaS/FaaS): broader hosting offering, both could be combined with e.g. OpenShift running on the Kubernetes cluster
+						    * story time: we started by using Openshift as a deployment target for FADI, we crashed our OS cluster and decided to go for a more hands-on approach with k8s
 						* Use of a lightweight (one host node) version of Kubernetes: [Minikube](https://github.com/cetic/fadi/blob/master/INSTALL.md#1-local-installation) for local deployment or to create cheap CI/CD environments. It can run on ex. KVM, VirtualBox hypervisors or just using the Docker engine.
 					</script>
 				</section>
