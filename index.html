@@ -32,7 +32,8 @@
 					<script type="text/template">
 						<img data-src="img/logos/fadi_logo.png" class="plain" alt="FADI logo" style="margin-top: -100px" />
 						# A framework for big data analytics
-						[https://github.com/cetic/fadi](https://github.com/cetic/fadi)
+						## Ingest, Store and Analyse Big Data flows
+						[https://cetic.github.io/fadi/](https://cetic.github.io/fadi/)
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
@@ -106,18 +107,19 @@
 
 						* **availability**: scalability, resilience, monitoring, load testing
 						* **portability**: deployment on premises, in a public cloud, hybrid, ...
-						* **installability**: automated installation, continuous deployment and integration
+						* **maintenability**: automated installation and upgrade, continuous deployment and integration
 						* modular, extensible (API’s), responsive web interfaces, open source, minimal operation costs, ...
 						* ...
 
 						Notes:
 						* **portability**: avoid **vendor lock-in**
+						* See ISO 25000 from which FADI's quality model is inspired
 						* modular: system components can be swapped (ex. change one message broker engine by another: Kafka<->Pulsar), added or removed with relative ease (configuration)
 					</script>
 				</section>
-
+				
 			</section>
-			<section id=architecture">
+			<section id="architecture">
 				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 						# 2. Architecture
@@ -432,14 +434,15 @@
 							<tr class="noborder">
 								<td class="noborder" style="vertical-align:middle; text-align: center;">
 									<a href="https://nifi.apache.org/" ><img class="plain" style="margin: 0;" data-src="img/logos/nifi.png" alt="Apache Nifi" height="100px" /></a><br />
-									Apache nifi - Process and distribute data through a web interface.
+									Apache NiFi - Process and distribute data through a web interface.
 								</td>
-								<td class="noborder" width="50%" height="800px" style="background-image: url(img/archi/nifi_sample_dashboard.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
+								<td class="noborder" width="80%" height="800px" style="background-image: url(img/archi/nifi_sample_dashboard.png); background-size: contain; background-repeat: no-repeat; background-position: center;"></td>
 							</tr>
 						</table>
 
 						Notes:
 						* uses Zookeeper under the hood
+						* possible alternatives: Node-RED, Streamsets
 					</script>
 				</section>
 
