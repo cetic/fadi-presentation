@@ -30,10 +30,10 @@
 			<div class="slides">
 				<section data-markdown class="homepage" data-background-image="img/theme/cetic/background-homepage.png" data-background-size="contain">
 					<script type="text/template">
-						<a href="https://cetic.github.io/fadi/"><img data-src="img/logos/fadi_logo.png" class="plain" alt="FADI logo" style="margin-top: -100px" /></a>
+						<a href="https://fadi.cetic.be"><img data-src="img/logos/fadi_logo.png" class="plain" alt="FADI logo" style="margin-top: -100px" /></a>
 						# A framework for big data analytics
 						## Ingest, Store and Analyse Big Data flows
-						[https://cetic.github.io/fadi/](https://cetic.github.io/fadi/)
+						[https://fadi.cetic.be](https://fadi.cetic.be)
 					</script>
 				</section>
 				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
@@ -643,7 +643,7 @@
 						* Kubernetes (CaaS) vs OpenShift (PaaS/FaaS): broader hosting offering, both could be combined with e.g. OpenShift running on the Kubernetes cluster
 						    * story time: we started by using Openshift as a deployment target for FADI, we crashed our OS cluster and decided to go for a more hands-on approach with k8s
 						* Use of a lightweight (one host node) version of Kubernetes: [Minikube](https://github.com/cetic/fadi/blob/master/INSTALL.md#1-local-installation) for local deployment or to create cheap CI/CD environments. It can run on ex. KVM, VirtualBox hypervisors or just using the Docker engine.
-                            * [microk8s](https://microk8s.io/) was also considered as an alternative to minikube, it was put aside because smaller user base 
+                            * [microk8s](https://microk8s.io/) was also considered as an alternative to minikube, it was put aside because smaller user base (and time constraints)
 					</script>
 				</section>
 
@@ -710,23 +710,13 @@
 						# 3. Sample Use Case
 						## Building monitoring at CETIC offices
 
-						<img class="plain" src="img/usecases/usecase1.svg" alt="Use case 1" />
+						<img class="plain" src="img/usecases/uc.svg" alt="Use case 1" />
 
 						Provide insights (dashboards and alerts) based on the building sensors data (temperature, co2, ...)
 
-					</script>
-				</section>
-				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
-					<script type="text/template">
-						# 3. Sample Use Case
-						## Building monitoring at CETIC offices
-
-						<img class="plain" src="img/usecases/usecase1.svg" alt="Use case 1" />
-
                         In this simple example, we will ingest temperature measurements from sensors, store them and display them in a simple dashboard.
 
-						Head to https://github.com/cetic/fadi/blob/master/USERGUIDE.md for a tutorial on how to use the FADI framework on this simple use case
-
+						Head to [https://fadi.cetic.be/USERGUIDE.html](https://fadi.cetic.be/USERGUIDE.html) for a tutorial on how to use the FADI framework on this simple use case
 					</script>
 				</section>
 
@@ -735,7 +725,9 @@
 				<section data-markdown data-background-image="img/logos/cetic_fadi_logo.png" data-background-position="98% 2%" data-background-size="20%">
 					<script type="text/template">
 # 4. Conclusion
+
 > The FADI project is dedicated to making the deployment of Big Data tools simple, portable and scalable. The goal is to provide a straightforward way to deploy open-source systems for Big Data to various infrastructures (private and public clouds).
+
 &darr;
 					</script>
 				</section>
@@ -744,11 +736,12 @@
 # 4. Conclusion
 
 More on FADI:
-* **Usage** documentation: https://github.com/cetic/fadi/USERGUIDE.md
-* **Installation** instructions: https://github.com/cetic/fadi/INSTALL.md
+* **Usage** documentation: https://fadi.cetic.be/USERGUIDE.html
+* **Installation** instructions: https://fadi.cetic.be/INSTALL.html
 * **Support** (questions, problems, feature requests, ...):
 	* https://github.com/cetic/fadi/issues/new
 	* [fadi@lists.cetic.be](mailto:fadi@lists.cetic.be)
+* **About** https://cetic.be/FADI
 					</script>
 				</section>
 			</section>
